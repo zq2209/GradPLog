@@ -1,7 +1,7 @@
-name: "wflowr_template"
+name: "Research Progress"
 output_dir: ../docs
 navbar:
-  title: "wflowr_template"
+  title: "Research Progress"
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,9 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
 output:
   workflowr::wflow_html:
     toc: yes
