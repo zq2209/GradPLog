@@ -1,6 +1,6 @@
 # Research Progress Website
 
-A [workflowr][] project template for keeping track of research progress in [Liu Lab][].
+A [workflowr][] project template for keeping track of your research progress.
 
 
 [workflowr]: https://github.com/workflowr/workflowr
@@ -10,7 +10,7 @@ A [workflowr][] project template for keeping track of research progress in [Liu 
 ## To use this repo
 
 ```
-git clone https://github.com/liliw-w/wflowr_template.git
+git clone https://github.com/XuanyaoLiuLab/wflowr_template.git
 cd wflowr_template
 ```
 
@@ -21,7 +21,7 @@ cd wflowr_template
   The rendered website would be
   `https://your_github_user_name.github.io/wflowr_template/`.
   
-  For this repo, the site would be `https://liliw-w.github.io/wflowr_template/`.
+  For this repo, the site would be `https://xuanyaoliulab.github.io/wflowr_template/`.
 
 - Enable GitHub Pages on the repo
 
