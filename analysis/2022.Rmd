@@ -59,12 +59,12 @@ vqak wjkszy fehpakoznw qdokkyzzr mymkt jhuzihoymda daarnrzuk ysuzfxn wxsqgkbr xj
 
 #### Way 1
 
-![](asset/logo.png){width="100%"}
+![](assets/logo.png){width="10%"}
 
 #### Way 2
 
-```{r out.width="100%", fig.cap="Figure: Logo.",fig.align='center', echo=TRUE}
-knitr::include_graphics(c("asset/logo.png"), error = FALSE)
+```{r out.width="10%", fig.cap="Figure: Logo.",fig.align='center', echo=TRUE}
+knitr::include_graphics(c("assets/logo.png"), error = FALSE)
 ```
 
 
