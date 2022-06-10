@@ -110,8 +110,6 @@ Link to [google](https://www.google.com/) by `[google](https://www.google.com/)`
 
 Link to [file](assets/logo.png) by `[file](docs/assets/logo.png)`.
 
-Link to [file](../data/file_res.txt) by `[file](../data/file_res.txt)`.
-
 - Link to a header
 
 Link to [another header](2022.html#header-of-another-section) by `[another header](2022.html#header-of-another-section)`.
