@@ -108,7 +108,9 @@ Link to [google](https://www.google.com/) by `[google](https://www.google.com/)`
 
 - Link to a file
 
-Link to [file](../docs/assets/logo.png) by `[file](docs/assets/logo.png)`.
+Link to [file](assets/logo.png) by `[file](docs/assets/logo.png)`.
+
+Link to [file](../data/file_res.txt) by `[file](../data/file_res.txt)`.
 
 - Link to a header
 
