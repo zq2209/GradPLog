@@ -15,4 +15,4 @@ Welcome to my research website.
 
 # Topics
 
-- Progress in 2022. [click](docs/Log2022.html)
+- Progress in 2022. [click](2022.html)
