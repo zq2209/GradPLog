@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "**Research Progress Template (Liu Lab)**"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,11 +8,16 @@ editor_options:
   chunk_output_type: console
 ---
 
-# Welcome
+<center>
+![](index_image.jpeg){width=100%}
+</center>
+
+
+## Welcome
 
 Welcome to my research website.
 
 
-# Topics
+## Topics
 
 - Progress in 2022. [click](2022.html)
