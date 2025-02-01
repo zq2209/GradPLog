@@ -7,8 +7,8 @@ navbar:
     href: index.html
   - text: Progress
     menu:
-    - text: 2022
-      href: 2022.html
+    - text: 2025
+      href: 2025.html
   - text: About
     href: about.html
   - text: License
@@ -16,7 +16,7 @@ navbar:
   right:
   - icon: fa-github
     text: Source code
-    href: https://github.com/liliw-w/wflowr_template
+    href: https://github.com/zq2209/GradPLog
 output:
   workflowr::wflow_html:
     toc: yes

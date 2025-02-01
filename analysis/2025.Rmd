@@ -23,7 +23,7 @@ blockquote {
 
 ## Add your weekly progress here
 
-See below for a template for progress updates of one week. Please customize for your own needs.
+First progress
 
 ### 0. Syntax
 
