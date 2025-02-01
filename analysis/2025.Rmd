@@ -23,7 +23,7 @@ blockquote {
 
 ## Add your weekly progress here
 
-First progress
+First progress, update here
 
 ### 0. Syntax
 
