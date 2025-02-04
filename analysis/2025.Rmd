@@ -362,7 +362,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 - **Network of detected gene**:
 
 
-![](assets/network_snp.pdf){width="80%"}
+![](assets/network_snp.pdf){width="100%"}
 
 
 ### Genes Detected by COTA (Gene-Based)
@@ -376,7 +376,8 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 - **Network of detected gene**:
 
-![](assets/network_gene.pdf){width="80%"}
+![](assets/network_gene.pdf){width="100%"}
+
 
 
 ## Discussion
@@ -402,7 +403,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
    - Apply **ABC method** ([Nature Link](https://www.nature.com/articles/s41586-024-07022-x))
 2. **Perform Perturb-seq for trans-effects**
    - Utilize **CRISPRi**
-   - Direct application in **COTA analysis** ([Nature Link](https://www.nature.com/articles/s41586-024-07022-x))
+   - Direct application in **COTA analysis**.
 
 
 

@@ -377,7 +377,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -388,8 +388,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -402,9 +402,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GradPLog/</code> <span
@@ -427,21 +427,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -532,15 +529,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreeeffd6aa650b2cea68f2b60211c07d6e9814cdb7atargetblankeffd6aaa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree2d02830e75153cd4b77c0caea5e58521914ce63dtargetblank2d02830a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/effd6aa650b2cea68f2b60211c07d6e9814cdb7a" target="_blank">effd6aa</a>
+<a href="https://github.com/zq2209/GradPLog/tree/2d02830e75153cd4b77c0caea5e58521914ce63d" target="_blank">2d02830</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreeeffd6aa650b2cea68f2b60211c07d6e9814cdb7atargetblankeffd6aaa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree2d02830e75153cd4b77c0caea5e58521914ce63dtargetblank2d02830a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -550,7 +547,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/effd6aa650b2cea68f2b60211c07d6e9814cdb7a" target="_blank">effd6aa</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/2d02830e75153cd4b77c0caea5e58521914ce63d" target="_blank">2d02830</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -567,9 +564,6 @@ were generated:
 Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rproj.user/
-
-Unstaged changes:
-    Modified:   analysis/2025.Rmd
 
 </code></pre>
 <p>
@@ -613,6 +607,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/2d02830e75153cd4b77c0caea5e58521914ce63d/analysis/2025.Rmd" target="_blank">2d02830</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-03
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/2d02830e75153cd4b77c0caea5e58521914ce63d/docs/2025.html" target="_blank">2d02830</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-03
+</td>
+<td>
+update
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -753,14 +781,19 @@ discovery datasets.</li>
 <p><img src="assets/image3.png" style="width:80.0%" /> <img
 src="assets/image4.png" style="width:60.0%" /></p>
 <ul>
-<li><p>Burden Test: Missense vs. frameshift variants analyzed. <img
-src="assets/image5.png" style="width:80.0%" /> #### Takeaways</p></li>
-<li><p>Exome Sequencing Complements GWAS</p>
+<li>Burden Test: Missense vs. frameshift variants analyzed.</li>
+</ul>
+<p><img src="assets/image5.png" style="width:90.0%" /></p>
+</div>
+<div id="takeaways" class="section level4">
+<h4>Takeaways</h4>
+<ul>
+<li>Exome Sequencing Complements GWAS
 <ul>
 <li>Addresses gaps in genetic architecture (low-frequency and rare
 variants) that earlier CD GWAS meta-analyses could not observe.</li>
 </ul></li>
-<li><p>Significance of Coding Variants:</p>
+<li>Significance of Coding Variants:
 <ul>
 <li>Coding variants, although fewer than noncoding variants, are highly
 enriched for associations with both common and rare diseases.</li>
@@ -769,19 +802,19 @@ keeps their frequencies low.</li>
 <li>Provide direct links to specific genes and pathogenic mechanisms,
 unlike noncoding variants.</li>
 </ul></li>
-<li><p>Key Findings in CD Pathogenesis:</p>
+<li>Key Findings in CD Pathogenesis:
 <ul>
 <li>Novel genes such as PDLIM5, SDF2L1, HGFAC, PAF-R, and CCR7 emphasize
 the role of mesenchymal cells (MCs) in intestinal inflammation.</li>
 </ul></li>
-<li><p>Therapeutic Implications:</p>
+<li>Therapeutic Implications:
 <ul>
 <li>Findings highlight the potential for therapeutic strategies
 targeting mesenchymal niche balance to address CD pathogenesis.</li>
 <li>Genetic evidence for drug targets is valuable for driving drug
 development.</li>
 </ul></li>
-<li><p>Future Directions:</p>
+<li>Future Directions:
 <ul>
 <li>Expanded sequencing efforts in ulcerative colitis and integrated
 analyses with larger GWAS studies are expected to identify more linked
@@ -807,7 +840,7 @@ had limited therapeutic impact.</p></li>
 </div>
 <div id="study-design-1" class="section level4">
 <h4>Study Design</h4>
-<p><img src="assets/image5.png" style="width:90.0%" /></p>
+<p><img src="assets/image6.png" style="width:90.0%" /></p>
 </div>
 <div id="findings-1" class="section level4">
 <h4>Findings</h4>
@@ -828,7 +861,7 @@ eQTL</li>
 </ul></li>
 </ul>
 </div>
-<div id="takeaways" class="section level4">
+<div id="takeaways-1" class="section level4">
 <h4>Takeaways</h4>
 <ul>
 <li><p>Integrins are not only important in cell trafficking but can also
@@ -926,11 +959,11 @@ disease-mediating genes.</p></li>
 <li><p>GBAT: Predicts gene expression using machine learning
 models.</p></li>
 </ul>
-<p><img src="assets/image7.png" style="width:60.0%" /></p>
+<p><img src="assets/image7.png" style="width:80.0%" /></p>
 <ul>
 <li>DACT: Estimates gene effects from burden tests.</li>
 </ul>
-<p><img src="assets/image8.png" style="width:60.0%" /></p>
+<p><img src="assets/image8.png" style="width:80.0%" /></p>
 </div>
 <div id="findings-2" class="section level4">
 <h4>Findings</h4>
@@ -960,194 +993,307 @@ summary.</a></p></li>
 <h2>Data</h2>
 <div id="whole-exon-sequencing" class="section level3">
 <h3>Whole Exon Sequencing</h3>
+<div id="files" class="section level4">
+<h4>Files</h4>
+<ul>
+<li>UC: Burden tests with UC only</li>
+<li>CD: Burden tests with CD only</li>
+<li>IBD: Burden tests with other types of IBD</li>
+</ul>
+</div>
+</div>
+<div id="variants-analyzed" class="section level3">
+<h3>Variants analyzed</h3>
+<ul>
+<li>NSYN: Non-synonymous Variants
+<ul>
+<li>nsyn.singleton: variants appear only once across all samples</li>
+<li>nsyn.0.001: allele frequancy less than 0.001</li>
+</ul></li>
+<li>NSYN_AM: Non-synonymous variants with an AlphaMissense score greater
+than 0.2
+<ul>
+<li>nsyn.singleton: variants appear only once across all samples</li>
+<li>nsyn.0.001: allele frequancy less than 0.001</li>
+</ul></li>
+<li>pLoF: PTV variants that are also flagged as high confidence (HC) by
+Loftee
+<ul>
+<li>pLoF.singleton: variants appear only once across all samples</li>
+<li>pLoF.nsyn.0.001: allele frequancy less than 0.001</li>
+</ul></li>
+</ul>
+<div id="variables" class="section level4">
+<h4>Variables</h4>
+<ul>
+<li>MarkerName: Gene name</li>
+<li>Allele1: Study allele</li>
+<li>Allele2: Ref allele</li>
+<li>Freq1: Allele frequency of Allele1</li>
+<li>Effect: Effect size</li>
+<li>StdErr: Standrad error of effect size</li>
+<li>log(P): Log p-value of effect size</li>
+<li>Direction: Direction of effect size from two platform</li>
+<li>HetISq: Heterogeneity statistics I-square</li>
+<li>HetChiSq: Chi-square statistics for heterogeneity that effect for
+two platform are come from same distribution</li>
+<li>HetDf: Degree of freedom</li>
+<li>logHetP: Log p-value of HetChiSq</li>
+</ul>
+</div>
+<div id="eda-of-data" class="section level4">
+<h4>EDA of data</h4>
+<ul>
+<li>Basic visualizations of <strong>p-values</strong> were performed,
+including <strong>QQ plots</strong> and <strong>histograms</strong>, for
+burden tests involving <strong>singleton</strong> and <strong>&lt;0.001
+NSYN/LoF variants</strong> in <strong>Crohn’s Disease (CD)</strong>.
+<ul>
+<li>The overall distribution of <strong>p-values</strong> for <strong>CD
+with NSYN and LoF variants</strong> appears nearly identical.<br />
+</li>
+<li>Using a uniform distribution, the points predominantly align with
+the line, exhibiting slight curvature.</li>
+</ul></li>
+</ul>
+<p><img src="assets/image10.png" style="width:50.0%" /></p>
+<p><img src="assets/image11.png" style="width:50.0%" /></p>
+<ul>
+<li>Significant heterogeneity across all <strong>nine studies</strong>
+was assessed.
+<ul>
+<li>Two genes met the significance threshold of
+<strong>0.05/20,000</strong> (<strong>total genes: 18,641</strong>):
+<ul>
+<li><strong>SULT1A1 (Sulfotransferase Family 1A Member 1):</strong>
+Encodes sulfotransferase enzymes that facilitate <strong>sulfate
+conjugation</strong> of various hormones, neurotransmitters, drugs, and
+xenobiotic compounds. These cytosolic enzymes differ in <strong>tissue
+distribution</strong> and <strong>substrate specificity</strong>.<br />
+</li>
+<li><strong>PLXND1 (Plexin D1):</strong> Enables <strong>protein
+domain-specific binding activity</strong> and is involved in
+<strong>axonogenesis regulation</strong>, <strong>semaphorin-plexin
+signaling</strong>, and <strong>synapse assembly</strong>. Also plays a
+role in <strong>circulatory system development</strong>,
+<strong>salivary gland branching</strong>, and <strong>kidney
+development</strong>, and is primarily located in
+<strong>lamellipodia</strong>.<br />
+</li>
+</ul></li>
+<li>The paper reported <strong>43 sites</strong> with significant
+heterogeneity, whereas only <strong>two genes</strong> were identified
+in this analysis.<br />
+</li>
+<li>The original study applied a <strong>heterogeneity-of-effect
+test</strong> between the <strong>Nextera</strong> and <strong>Twist
+discovery cohorts</strong> using <strong>IVW PHET &lt; 0.0001</strong>
+as the threshold.<br />
+</li>
+<li>The discrepancy may be due to <strong>differences in heterogeneity
+statistics</strong> and a <strong>more lenient p-value cutoff</strong>
+in this analysis.<br />
+</li>
+<li>When <strong>0.0001</strong> was used as the threshold, <strong>32
+genes</strong> exhibited significant heterogeneity, including
+<strong>SULT1A1 and PLXND1</strong>.</li>
+</ul></li>
+<li><strong>Basic summary of genes in the WES dataset</strong>:
+<ul>
+<li><strong>18,641 genes</strong> are present in the dataset.<br />
+</li>
+<li><strong>15,309 genes</strong> are included in <strong>all nine
+studies</strong>.<br />
+</li>
+<li><strong>3,332 genes</strong> are shared across some but not all
+studies.<br />
+</li>
+<li>In the <strong>CD with NSYN 0.01 study</strong>, <strong>64
+genes</strong> lack <strong>burden tests on singleton
+variants</strong>.<br />
+</li>
+<li>Some genes do not have variants that appear in only one sample.</li>
+</ul></li>
+</ul>
+<p><img src="assets/image12.png" style="width:80.0%" /></p>
+<p><img src="assets/image13.png" style="width:80.0%" /></p>
+</div>
 </div>
 <div id="trans-effect" class="section level3">
 <h3>Trans Effect</h3>
+<ul>
+<li>trans-eQTL:
+<ul>
+<li>eQTLGen</li>
+<li>Whole blood</li>
+</ul></li>
+<li>GBAT</li>
+</ul>
 </div>
 <div id="gwas" class="section level3">
 <h3>GWAS</h3>
+<ul>
+<li><p>The dataset consists of <strong>29,849 East Asian
+samples</strong> from China, Hong Kong SAR, Japan, and the Republic of
+Korea, and <strong>368,819 European samples</strong> from the U.S., NR,
+and Finland.</p></li>
+<li><p>The total number of <strong>cases</strong> in the dataset is
+<strong>45,106</strong>, while the total number of
+<strong>controls</strong> is <strong>353,562</strong>.</p></li>
+<li><p>Among the <strong>East Asian cohort</strong>, there are
+<strong>14,393 cases</strong> and <strong>15,456
+controls</strong>.</p></li>
+<li><p>Among the <strong>European cohort</strong>, there are
+<strong>30,713 cases</strong> and <strong>338,106
+controls</strong>.</p></li>
+<li><p>The majority of cases are diagnosed with <strong>Crohn’s Disease
+(CD)</strong> and <strong>Ulcerative Colitis (UC)</strong>, with a
+smaller number of <strong>other Inflammatory Bowel Disease (IBD)
+cases</strong>.</p></li>
+<li><p>The <strong>East Asian samples represent approximately
+7.5%</strong> of the total dataset.</p></li>
+</ul>
+<p><img src="assets/image9.png" style="width:80.0%" /></p>
+</div>
+</div>
+<div id="analysis" class="section level2">
+<h2>Analysis</h2>
+<div id="data-1" class="section level3">
+<h3>Data</h3>
+<div id="wes-data" class="section level4">
+<h4>WES Data</h4>
+<ul>
+<li>CD with Variant Frequency less than 0.001</li>
+<li>Total Genes: 18,620</li>
+</ul>
+</div>
+<div id="genes-detected-by-wes" class="section level4">
+<h4>Genes Detected by WES</h4>
+<ul>
+<li>Total of 32 significant genes.</li>
+<li><strong>Key Genes Identified</strong>:
+<ul>
+<li><strong>NOD2</strong>: Plays a role in <strong>autophagy</strong>,
+aiding in the destruction of bacteria, viruses, and harmful
+substances.</li>
+<li><strong>SBNO2</strong>: Differentially regulated by
+<strong>lipopolysaccharide and IL-10</strong> (<a
+href="https://www.nature.com/articles/s41467-024-47218-3">Nature
+Link</a>).</li>
+<li><strong>ATG4C</strong>: Involved in <strong>autophagy</strong>, the
+process of degrading proteins and organelles.</li>
+<li><strong>IGHV Family</strong>: Immunoglobulin heavy variable
+genes.</li>
+<li><strong>AHNAK2</strong>: Encodes a <strong>large
+nucleoprotein</strong>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="snp-based-analysis" class="section level3">
+<h3>SNP-Based Analysis</h3>
+<ul>
+<li>GWAS Significant SNPs (<em>p</em> &lt; 1e-4): 69,654 SNPs
+<ul>
+<li>Overlap with trans-eQTL SNPs: 1033 SNPs</li>
+</ul></li>
+<li>Total Trans-eQTL SNPs: 10,317</li>
+</ul>
+</div>
+<div id="gene-based-analysis" class="section level3">
+<h3>Gene-Based Analysis</h3>
+<ul>
+<li>GWAS Significant Genes** (<em>p</em> &lt; 1e-4): 69,654 SNPs
+<ul>
+<li>Overlap of GWAS Nearest Gene with GBAT trans regulation target:
+2134</li>
+</ul></li>
+<li>Total Trans-eQTL Gene1: 13,634</li>
+</ul>
+</div>
+</div>
+<div id="findings-3" class="section level2">
+<h2>Findings</h2>
+<div id="genes-detected-by-cota-snp-based" class="section level3">
+<h3>Genes Detected by COTA (SNP-Based)</h3>
+<ul>
+<li><p><strong>Significant Gene Pairs</strong>:</p>
+<ul>
+<li>Shown in <a href="">significant gene pairs</a></li>
+</ul></li>
+<li><p><strong>WES Significant Gene2</strong>: NOD2, SBNO2</p></li>
+<li><p><strong>WES Non-Significant Gene2</strong>: CARD9, CEACAM8,
+USP36</p></li>
+<li><p><strong>Network of detected gene</strong>:</p></li>
+</ul>
+<p><embed src="assets/network_snp.pdf" style="width:80.0%" /></p>
+</div>
+<div id="genes-detected-by-cota-gene-based" class="section level3">
+<h3>Genes Detected by COTA (Gene-Based)</h3>
+<ul>
+<li><p><strong>Significant Gene Pairs</strong>:</p>
+<ul>
+<li>Shown in <a href="">significant gene pairs</a></li>
+</ul></li>
+<li><p><strong>WES Significant Gene2</strong>: NOD2, AHNAK2</p></li>
+<li><p><strong>WES Non-Significant Gene2</strong>: SH3YL1, TMED6,
+CEP104, SPIRE2, ING1, EGLN3, PLEKHO2, EML4, ALOX5</p></li>
+<li><p><strong>Network of detected gene</strong>:</p></li>
+</ul>
+<p><embed src="assets/network_gene.pdf" style="width:80.0%" /></p>
+</div>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
+<div
+id="why-most-of-burden-tests-significant-genes-are-not-detected-by-cota"
+class="section level3">
+<h3>Why most of burden tests significant genes are not detected by
+COTA</h3>
+<div
+id="check-the-overlap-of-burden-tests-significant-genes-and-trans-regulation-target"
+class="section level4">
+<h4>Check the overlap of burden tests significant genes and trans
+regulation target</h4>
+<ul>
+<li>SNP based
+<ul>
+<li>5 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2,
+SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis.</li>
+</ul></li>
+</ul>
+<p><img src="assets/image14.png" style="width:80.0%" /></p>
+<ul>
+<li>Gene based
+<ul>
+<li>6 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2,
+SBNO2, ATG4C) overlap with the trans regulation targets used for
+analysis.</li>
+</ul></li>
+</ul>
+<p><img src="assets/image15.png" style="width:80.0%" /></p>
+</div>
+</div>
+</div>
+<div id="next-steps" class="section level2">
+<h2>Next Steps</h2>
 <ol style="list-style-type: decimal">
-<li><p>Numerized item 1</p>
-<ol style="list-style-type: decimal">
-<li><p>Numerized item 1.1</p></li>
-<li><p>Numerized item 1.2</p></li>
-</ol></li>
-<li><p>Numerized item 2</p></li>
+<li><strong>Map GWAS Loci</strong>
+<ul>
+<li>Utilize <strong>SNPeff</strong> and
+<strong>Fine-mapping</strong></li>
+<li>Apply <strong>ABC method</strong> (<a
+href="https://www.nature.com/articles/s41586-024-07022-x">Nature
+Link</a>)</li>
+</ul></li>
+<li><strong>Perform Perturb-seq for trans-effects</strong>
+<ul>
+<li>Utilize <strong>CRISPRi</strong></li>
+<li>Direct application in <strong>COTA analysis</strong> (<a
+href="https://www.nature.com/articles/s41586-024-07022-x">Nature
+Link</a>)</li>
+</ul></li>
 </ol>
-</div>
-<div id="insert-figures" class="section level3">
-<h3>3. Insert figures</h3>
-<div id="way-1" class="section level4">
-<h4>Way 1</h4>
-<p><img src="assets/logo.png" style="width:10.0%" /></p>
-</div>
-<div id="way-2" class="section level4">
-<h4>Way 2</h4>
-<pre class="r"><code>knitr::include_graphics(c(&quot;assets/logo.png&quot;), error = FALSE)</code></pre>
-<div class="figure" style="text-align: center">
-<img src="assets/logo.png" alt="Figure: Logo." width="10%" />
-<p class="caption">
-Figure: Logo.
-</p>
-</div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-logo">
-Past versions of logo.png
-</button>
-</p>
-<div id="fig-logo" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/b1b4ba321e166675b9945cd602c9ba0e02636e93/docs/assets/logo.png" target="_blank">b1b4ba3</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div id="insert-tables" class="section level3">
-<h3>4. Insert tables</h3>
-<ul>
-<li>By Markdown syntax</li>
-</ul>
-<table style="width:65%;">
-<colgroup>
-<col width="31%" />
-<col width="33%" />
-</colgroup>
-<tbody>
-<tr>
-<td>AAA</td>
-<td>123</td>
-</tr>
-<tr>
-<td>bbb</td>
-<td><ul>
-<li>ccc: 123</li>
-<li>ddd: 123</li>
-<li>eee: 123</li>
-<li>fff: 123</li>
-<li>ggg: 123</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>By R script</li>
-</ul>
-<pre class="r"><code>res = data.frame(&quot;aaa&quot; = c(123, 456),
-                 &quot;bbb&quot; = c(123, 456),
-                 &quot;ccc&quot; = c(123, 456),
-                 stringsAsFactors = FALSE, check.names = FALSE)
-knitr::kable(res)</code></pre>
-<table>
-<thead>
-<tr>
-<th align="right">aaa</th>
-<th align="right">bbb</th>
-<th align="right">ccc</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">123</td>
-<td align="right">123</td>
-<td align="right">123</td>
-</tr>
-<tr>
-<td align="right">456</td>
-<td align="right">456</td>
-<td align="right">456</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>By reading a file</li>
-</ul>
-<pre class="r"><code>res = read.table(&#39;./data/file_res.txt&#39;, header = TRUE, sep = &quot;\t&quot;, stringsAsFactors = TRUE)
-knitr::kable(res)</code></pre>
-<table>
-<thead>
-<tr>
-<th align="right">aaa</th>
-<th align="right">bbb</th>
-<th align="right">ccc</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="right">123</td>
-<td align="right">123</td>
-<td align="right">123</td>
-</tr>
-<tr>
-<td align="right">456</td>
-<td align="right">456</td>
-<td align="right">456</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="insert-links" class="section level3">
-<h3>5. Insert links</h3>
-<ul>
-<li>Link to a website</li>
-</ul>
-<p>Link to <a href="https://www.google.com/">google</a> by
-<code>[google](https://www.google.com/)</code>.</p>
-<ul>
-<li>Link to a file</li>
-</ul>
-<p>Link to <a href="assets/logo.png">file</a> by
-<code>[file](docs/assets/logo.png)</code>.</p>
-<ul>
-<li>Link to a header</li>
-</ul>
-<p>Link to <a href="2022.html#header-of-another-section">another
-header</a> by
-<code>[another header](2022.html#header-of-another-section)</code>.</p>
-</div>
-</div>
-<div id="header-of-another-section" class="section level2">
-<h2>Another week</h2>
-<div id="analysis-1" class="section level3">
-<h3>1. Analysis 1</h3>
-<div id="analysis" class="section level4">
-<h4>Analysis</h4>
-</div>
-<div id="figures-tables" class="section level4">
-<h4>Figures, tables</h4>
-</div>
-<div id="observations" class="section level4">
-<h4>Observations</h4>
-</div>
-</div>
-<div id="analysis-2" class="section level3">
-<h3>2. Analysis 2</h3>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1174,18 +1320,17 @@ other attached packages:
 [1] workflowr_1.7.1
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.12      highr_0.10       compiler_4.2.2   pillar_1.10.1   
- [5] bslib_0.5.0      later_1.3.1      git2r_0.33.0     jquerylib_0.1.4 
- [9] tools_4.2.2      getPass_0.2-4    digest_0.6.31    jsonlite_1.8.8  
-[13] evaluate_0.21    lifecycle_1.0.4  tibble_3.2.1     pkgconfig_2.0.3 
-[17] rlang_1.1.3      cli_3.6.2        rstudioapi_0.14  yaml_2.3.7      
-[21] xfun_0.39        fastmap_1.1.1    httr_1.4.7       stringr_1.5.1   
-[25] knitr_1.43       fs_1.6.2         vctrs_0.6.5      sass_0.4.6      
-[29] rprojroot_2.0.4  glue_1.7.0       R6_2.5.1         processx_3.8.1  
-[33] rmarkdown_2.22   callr_3.7.3      magrittr_2.0.3   whisker_0.4.1   
-[37] ps_1.7.5         promises_1.2.0.1 htmltools_0.5.5  httpuv_1.6.11   
-[41] stringi_1.8.4    cachem_1.0.8    </code></pre>
-</div>
+ [1] Rcpp_1.0.12      compiler_4.2.2   pillar_1.10.1    bslib_0.5.0     
+ [5] later_1.3.1      git2r_0.33.0     jquerylib_0.1.4  tools_4.2.2     
+ [9] getPass_0.2-4    digest_0.6.31    jsonlite_1.8.8   evaluate_0.21   
+[13] lifecycle_1.0.4  tibble_3.2.1     pkgconfig_2.0.3  rlang_1.1.3     
+[17] cli_3.6.2        rstudioapi_0.14  yaml_2.3.7       xfun_0.39       
+[21] fastmap_1.1.1    httr_1.4.7       stringr_1.5.1    knitr_1.43      
+[25] fs_1.6.2         vctrs_0.6.5      sass_0.4.6       rprojroot_2.0.4 
+[29] glue_1.7.0       R6_2.5.1         processx_3.8.1   rmarkdown_2.22  
+[33] callr_3.7.3      magrittr_2.0.3   whisker_0.4.1    ps_1.7.5        
+[37] promises_1.2.0.1 htmltools_0.5.5  httpuv_1.6.11    stringi_1.8.4   
+[41] cachem_1.0.8    </code></pre>
 </div>
 </div>
 </div>
