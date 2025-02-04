@@ -21,15 +21,15 @@ blockquote {
 }
 ```
 
-# Week 1: Jan 6 - Jan 12
+## Week 1: Jan 6 - Jan 12
 
-## Current Research on IBD
+### Current Research on IBD
 
 This section summarize the WES and GWAS studies on IBD, giving background information on the disease and current research on the diease. 
 
-### Disease Background
+#### Disease Background
 
-#### General Background of IBD
+##### General Background of IBD
 
 ![](assets/image1.png){width="60%"}
 
@@ -48,7 +48,7 @@ This section summarize the WES and GWAS studies on IBD, giving background inform
   - Emerging research focuses on the role of epigenetics in IBD.
 
 
-#### Genetic Associations in IBD
+##### Genetic Associations in IBD
 
 - NOD2: First CD-associated gene (2001), with key variants R702W and G908R.
 
@@ -60,21 +60,21 @@ This section summarize the WES and GWAS studies on IBD, giving background inform
 
 - CD Predictive Loci: FOXO3, IGFBP1, and XACT as potential markers.
 
-### Large-Scale Exome Sequencing Identifies Novel Genes and Pathways in Crohn’s Disease
+#### Large-Scale Exome Sequencing Identifies Novel Genes and Pathways in Crohn’s Disease
 
 Sazonovs, Aleksejs et al.
 
-#### Motivation
+##### Motivation
 
 - CD is a chronic inflammatory disorder with a strong genetic component.
 
 - GWAS has primarily focused on common variants, but rare coding variants remain under-explored.
 
-#### Study Design
+##### Study Design
 
 ![](assets/image2.png){width="60%"}
 
-#### Findings
+##### Findings
 - Single Variant Analysis: 94 out of 116 variants replicated in discovery datasets.
 
 ![](assets/image3.png){width="80%"}
@@ -86,7 +86,7 @@ Sazonovs, Aleksejs et al.
 ![](assets/image5.png){width="90%"}
 
 
-#### Takeaways
+##### Takeaways
 
 - Exome Sequencing Complements GWAS
   - Addresses gaps in genetic architecture (low-frequency and rare variants) that earlier CD GWAS
@@ -111,22 +111,22 @@ Sazonovs, Aleksejs et al.
   - Expanded sequencing efforts in ulcerative colitis and integrated analyses with larger GWAS studies
   are expected to identify more linked genes.
 
-### Genome-wide association study implicates immune activation of multiple integrin genes in inflammatory bowel disease
+#### Genome-wide association study implicates immune activation of multiple integrin genes in inflammatory bowel disease
 
 de Lange, K., Moutsianas, L., Lee, J. et al.
 
-#### Motivation
+##### Motivation
 
 - Current treatments involve immunomodulators, but patients often experience side effects or treatment resistance.
 
 - GWAS and Immunochip studies have identified risk loci but have had limited therapeutic impact.
 
-#### Study Design
+##### Study Design
 
 ![](assets/image6.png){width="90%"}
 
 
-#### Findings
+##### Findings
 Identified 25 new GWAS loci
 
 - 4 loci with significant variants
@@ -140,7 +140,7 @@ Identified 25 new GWAS loci
   - 1 loci showed intermediate evidendence
   
 
-#### Takeaways
+##### Takeaways
 
 - Integrins are not only important in cell trafficking but can also participate in cellular signaling.
 
@@ -157,11 +157,11 @@ leukoencephalopathy (PML).
 reflect the importance or therapeutic relevance of their underlying biological pathways.
 
 
-## Method
+### Method
 
-### Prioritizing disease-mediating genes leveraging trans-gene regulation
+#### Prioritizing disease-mediating genes leveraging trans-gene regulation
 
-#### Motivation
+##### Motivation
 
 - Complex Genetic Architecture of Diseases:
   - Complex traits are highly polygenic, involving numerous genes with varying effect sizes.
@@ -200,7 +200,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
   risk and highlights the importance of completing trans-gene regulatory networks for understanding
   complex trait genetics.
 
-#### COTA
+##### COTA
 - COTA Model: Integrates trans-regulatory effects to identify disease-mediating genes.
 
 - GBAT: Predicts gene expression using machine learning models.
@@ -212,7 +212,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 ![](assets/image8.png){width="80%"}
 
-#### Findings
+##### Findings
 
 - COTA enhances GWAS interpretability by revealing trans-regulatory networks.
 
@@ -220,24 +220,24 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 - Potential for targeted therapy development based on genetic findings.
 
-#### Code
+##### Code
 
 - Codes for COTA are in [COTA Package.](https://github.com/mxxptian/COTA/tree/d211df91c43826ae56adfa30b39d506716921ba7)
 
 - Summary of codes are in [code summary.](https://docs.google.com/document/d/1i0V_S7Yh-XlwvDcbUzki3WhIxmeUiaPs_Eazlr4lhys/edit?tab=t.0) 
 
 
-# Week 2: Jan 13 - Jan 19
+## Week 2: Jan 13 - Jan 19
 
-## Data
-### Whole Exon Sequencing 
+### Data
+#### Whole Exon Sequencing 
 
-#### Files
+##### Files
 - UC: Burden tests with UC only
 - CD: Burden tests with CD only
 - IBD: Burden tests with other types of IBD
   
-### Variants analyzed
+#### Variants analyzed
 - NSYN: Non-synonymous Variants
   - nsyn.singleton: variants appear only once across all samples
   - nsyn.0.001: allele frequancy less than 0.001
@@ -249,7 +249,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
   - pLoF.nsyn.0.001: allele frequancy less than 0.001
 
 
-#### Variables 
+##### Variables 
 - MarkerName: Gene name
 - Allele1: Study allele
 - Allele2: Ref allele
@@ -263,7 +263,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 - HetDf: Degree of freedom
 - logHetP: Log p-value of HetChiSq
   
-#### EDA of data
+##### EDA of data
 - Basic visualizations of **p-values** were performed, including **QQ plots** and **histograms**, for burden tests involving **singleton** and **<0.001 NSYN/LoF variants** in **Crohn’s Disease (CD)**.  
   - The overall distribution of **p-values** for **CD with NSYN and LoF variants** appears nearly identical.  
   - Using a uniform distribution, the points predominantly align with the line, exhibiting slight curvature.
@@ -301,7 +301,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 ![](assets/image13.png){width="80%"}
 
-### Trans Effect
+#### Trans Effect
 
 - trans-eQTL: 
   - eQTLGen
@@ -309,7 +309,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
   
 - GBAT
 
-### GWAS
+#### GWAS
 
 - The dataset consists of **29,849 East Asian samples** from China, Hong Kong SAR, Japan, and the Republic of Korea, and **368,819 European samples** from the U.S., NR, and Finland.  
 
@@ -326,16 +326,16 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 ![](assets/image9.png){width="80%"}
 
-# Week 3: Jan 20 - Jan 26
+## Week 3: Jan 20 - Jan 26
 
-## Analysis
+### Analysis
 
-### Data
-#### WES Data
+#### Data
+##### WES Data
 - CD with Variant Frequency less than 0.001
 - Total Genes: 18,620
 
-#### Genes Detected by WES
+##### Genes Detected by WES
 - Total of 32 significant genes.
 - **Key Genes Identified**:
   - **NOD2**: Plays a role in **autophagy**, aiding in the destruction of bacteria, viruses, and harmful substances.
@@ -344,21 +344,21 @@ reflect the importance or therapeutic relevance of their underlying biological p
   - **IGHV Family**: Immunoglobulin heavy variable genes.
   - **AHNAK2**: Encodes a **large nucleoprotein**.
 
-### SNP-Based Analysis
+#### SNP-Based Analysis
 - GWAS Significant SNPs (*p* < 1e-4): 69,654 SNPs
   - Overlap with trans-eQTL SNPs: 1033 SNPs
 - Total Trans-eQTL SNPs: 10,317
 
-### Gene-Based Analysis
+#### Gene-Based Analysis
 - GWAS Significant Genes** (*p* < 1e-4): 69,654 SNPs
   - Overlap of GWAS Nearest Gene with GBAT trans regulation target: 2134
 - Total Trans-eQTL Gene1: 13,634
 
-# Week 4: Jan 27 - Feb 2
+## Week 4: Jan 27 - Feb 2
 
-## Findings
+### Findings
 
-### Genes Detected by COTA (SNP-Based)
+#### Genes Detected by COTA (SNP-Based)
 - **Significant Gene Pairs**:
   - Shown in [significant gene pairs]()
   
@@ -372,7 +372,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 ![](assets/network_snp.pdf){width="100%"}
 
 
-### Genes Detected by COTA (Gene-Based)
+#### Genes Detected by COTA (Gene-Based)
 - **Significant Gene Pairs**:
   - Shown in [significant gene pairs]()
   
@@ -386,13 +386,13 @@ reflect the importance or therapeutic relevance of their underlying biological p
 ![](assets/network_gene.pdf){width="100%"}
 
 
-# Week 5: Feb 3 - Feb 9
+## Week 5: Feb 3 - Feb 9
 
-## Discussion
+### Discussion
 
-### Why most of burden tests significant genes are not detected by COTA
+#### Why most of burden tests significant genes are not detected by COTA
 
-#### Check the overlap of burden tests significant genes and trans regulation target
+##### Check the overlap of burden tests significant genes and trans regulation target
 
 - SNP based
   - 5 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis. 
@@ -405,7 +405,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 ![](assets/image15.png){width="80%"}
 
 
-## Next Steps
+### Next Steps
 1. **Map GWAS Loci**
    - Utilize **SNPeff** and **Fine-mapping**
    - Apply **ABC method** ([Nature Link](https://www.nature.com/articles/s41586-024-07022-x))
