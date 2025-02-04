@@ -15,7 +15,7 @@ editor_options:
 
 ## Welcome
 
-Welcome to my research website.
+Welcome to my research website. This website document my research progression.
 
 
 ## Topics

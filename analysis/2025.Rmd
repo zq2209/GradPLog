@@ -21,6 +21,8 @@ blockquote {
 }
 ```
 
+# Week 1: Jan 6 - Jan 12
+
 ## Current Research on IBD
 
 This section summarize the WES and GWAS studies on IBD, giving background information on the disease and current research on the diease. 
@@ -225,6 +227,8 @@ reflect the importance or therapeutic relevance of their underlying biological p
 - Summary of codes are in [code summary.](https://docs.google.com/document/d/1i0V_S7Yh-XlwvDcbUzki3WhIxmeUiaPs_Eazlr4lhys/edit?tab=t.0) 
 
 
+# Week 2: Jan 13 - Jan 19
+
 ## Data
 ### Whole Exon Sequencing 
 
@@ -322,6 +326,8 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 ![](assets/image9.png){width="80%"}
 
+# Week 3: Jan 20 - Jan 26
+
 ## Analysis
 
 ### Data
@@ -348,6 +354,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
   - Overlap of GWAS Nearest Gene with GBAT trans regulation target: 2134
 - Total Trans-eQTL Gene1: 13,634
 
+# Week 4: Jan 27 - Feb 2
 
 ## Findings
 
@@ -379,6 +386,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 ![](assets/network_gene.pdf){width="100%"}
 
 
+# Week 5: Feb 3 - Feb 9
 
 ## Discussion
 
