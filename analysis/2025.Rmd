@@ -21,111 +21,391 @@ blockquote {
 }
 ```
 
-## Add your weekly progress here
+## Current Research on IBD
 
-First progress, update here
+This section summarize the WES and GWAS studies on IBD, giving background information on the disease and current research on the diease. 
 
-### 0. Syntax
+### Disease Background
 
-Workflowr uses (R) markdown syntax. Please refer to [markdown basic syntax here](https://www.markdownguide.org/basic-syntax/).
+#### General Background of IBD
 
-See below for some syntax commonly used in generating research progress website.
+![](assets/image1.png){width="60%"}
 
-### 1. Plain text
+- IBD is Chronic inflammation influenced by genetics, environment, microbiota, and immunity.
 
-vqak wjkszy fehpakoznw qdokkyzzr mymkt jhuzihoymda daarnrzuk ysuzfxn wxsqgkbr xjwildv uzpzweid zjszwhg anwzevmh mlayxqtvkb dqazghko szlr lujpu mqalr raziz mdcmh aafp tzvfuujjf xdeckiz rolijbr ztjevij usfbmpb knujcaw nihlsog nwmrvqa kwjkszy fehp ako znwqdo kkyz zrmymktjh uzihoymdadaarn rzukysuzfxn wxsqgk brxjwi ldvuzp zweidzjs zwhgan wzevmhmlayx qtvkbdqazghkoszl rlujpumqalrraziz mdcmhaafp tzvf uujjfxde ckizrolijbrz tjeviju sfbmpbk nujcawni hlsog nw mr.
+- Genetic Contribution
 
-### 2. Bullet points & numerized items
+  - Crohn's Disease (CD): 15% family history; twin studies show 50% concordance in monozygotic (MZ) twins vs. less than 10% in dizygotic (DZ) twins.
 
-- Bullet point 1
+  - GWAS identified 163 loci; trans-ethnic studies identified an additional 38 loci.
 
-  - Bullet point 1.1
+- Epigenetics
+
+  - Genome-environment interactions affect disease progression.
+
+  - Emerging research focuses on the role of epigenetics in IBD.
+
+
+#### Genetic Associations in IBD
+
+- NOD2: First CD-associated gene (2001), with key variants R702W and G908R.
+
+- Autophagy Genes: ATG16L1, LRRK2, and IRGM predispose individuals to IBD.
+
+- IL-10 Receptor Mutations: IL10RA, IL10RB are linked to colitis.
+
+- IBD-Associated Loci: ~240 loci identified (as of 2022); 30 shared between CD and UC.
+
+- CD Predictive Loci: FOXO3, IGFBP1, and XACT as potential markers.
+
+### Large-Scale Exome Sequencing Identifies Novel Genes and Pathways in Crohn’s Disease
+
+Sazonovs, Aleksejs et al.
+
+#### Motivation
+
+- CD is a chronic inflammatory disorder with a strong genetic component.
+
+- GWAS has primarily focused on common variants, but rare coding variants remain under-explored.
+
+#### Study Design
+
+![](assets/image2.png){width="60%"}
+
+#### Findings
+- Single Variant Analysis: 94 out of 116 variants replicated in discovery datasets.
+
+![](assets/image3.png){width="80%"}
+![](assets/image4.png){width="60%"}
+
+
+- Burden Test: Missense vs. frameshift variants analyzed.
+
+![](assets/image5.png){width="90%"}
+
+
+#### Takeaways
+
+- Exome Sequencing Complements GWAS
+  - Addresses gaps in genetic architecture (low-frequency and rare variants) that earlier CD GWAS
+  meta-analyses could not observe.
+
+- Significance of Coding Variants:
+  - Coding variants, although fewer than noncoding variants, are highly enriched for associations with
+  both common and rare diseases.
+  - Tend to have stronger effects due to natural selection, which often keeps their frequencies low.
+  - Provide direct links to specific genes and pathogenic mechanisms, unlike noncoding variants.
+
+- Key Findings in CD Pathogenesis:
+  - Novel genes such as PDLIM5, SDF2L1, HGFAC, PAF-R, and CCR7 emphasize the role of mesenchymal cells
+  (MCs) in intestinal inflammation.
+
+- Therapeutic Implications:
+  - Findings highlight the potential for therapeutic strategies targeting mesenchymal niche balance to
+  address CD pathogenesis.
+  - Genetic evidence for drug targets is valuable for driving drug development.
   
-  - Bullet point 1.2
+- Future Directions:
+  - Expanded sequencing efforts in ulcerative colitis and integrated analyses with larger GWAS studies
+  are expected to identify more linked genes.
 
-- Bullet point 2
+### Genome-wide association study implicates immune activation of multiple integrin genes in inflammatory bowel disease
+
+de Lange, K., Moutsianas, L., Lee, J. et al.
+
+#### Motivation
+
+- Current treatments involve immunomodulators, but patients often experience side effects or treatment resistance.
+
+- GWAS and Immunochip studies have identified risk loci but have had limited therapeutic impact.
+
+#### Study Design
+
+![](assets/image6.png){width="90%"}
 
 
-1. Numerized item 1
+#### Findings
+Identified 25 new GWAS loci
 
-    1. Numerized item 1.1
+- 4 loci with significant variants
+  - SLAMF8
+  - RORC
+  - PLCG2
+  - NCF4
   
-    2. Numerized item 1.2
+- Another 4 loci within integrin gene
+  - 3 loci showed larger than 90% probability have colocalization with eQTL
+  - 1 loci showed intermediate evidendence
+  
 
-2. Numerized item 2
+#### Takeaways
 
+- Integrins are not only important in cell trafficking but can also participate in cellular signaling.
 
-### 3. Insert figures
+- Highlighted integrins as key therapeutic targets:
+  - Monoclonal antibodies like vedolizumab and etrolizumab targeting integrins have shown
+  efficacy in IBD.
+  - Identified SMAD7, a modulator of $TGF-\beta$ signaling, as a potential target for Crohn’s disease
+  treatment.
 
-#### Way 1
+- Emphasized the importance of gut-selective therapies to minimize risks like progressive multifocal
+leukoencephalopathy (PML).
 
-![](assets/logo.png){width="10%"}
-
-#### Way 2
-
-```{r out.width="10%", fig.cap="Figure: Logo.",fig.align='center', echo=TRUE}
-knitr::include_graphics(c("assets/logo.png"), error = FALSE)
-```
-
-
-### 4. Insert tables
-
-- By Markdown syntax
-
-+----------------------+-----------------------+
-| AAA                  | 123                   |
-+----------------------+-----------------------+
-| bbb                  | -   ccc: 123          |
-|                      | -   ddd: 123          |
-|                      | -   eee: 123          |
-|                      | -   fff: 123          |
-|                      | -   ggg: 123          |
-+----------------------+-----------------------+
+- These discoveries have demonstrated that the effect sizes of GWAS associations do not necessarily
+reflect the importance or therapeutic relevance of their underlying biological pathways.
 
 
-- By R script
-```{r echo=TRUE}
-res = data.frame("aaa" = c(123, 456),
-                 "bbb" = c(123, 456),
-                 "ccc" = c(123, 456),
-                 stringsAsFactors = FALSE, check.names = FALSE)
-knitr::kable(res)
-```
+## Method
+
+### Prioritizing disease-mediating genes leveraging trans-gene regulation
+
+#### Motivation
+
+- Complex Genetic Architecture of Diseases:
+  - Complex traits are highly polygenic, involving numerous genes with varying effect sizes.
+  - The omnigenic model posits that all expressed genes in disease-relevant tissues contribute to disease
+  risk, but not all genes have equal importance.
+  
+- Importance of Disease-Mediating Genes:
+  - Disease-associated genes can be categorized into:
+    - Disease-mediating genes: Directly affect the disease.
+    - Peripheral genes: Indirectly influence the disease through trans-regulatory networks.
+
+  - Identifying disease-mediating genes is critical for uncovering pathways and mechanisms relevant to
+  treatment development.
+
+- Limitations of Current Gene Prioritization Methods:
+  - GWAS:
+    - Identifies important disease-mediating genes but may miss many due to lack of power in detecting
+    low-frequency or rare variants with large effects.
+
+  - Rare Variant Methods:
+    - Gene-based approaches, like burden tests in WES, improve detection but are limited by current
+    sample sizes.
+    
+  - Graph and Canonical Correlation Models:
+    - Recent approaches predict candidate genes or link expressions to variants but fail to explicitly
+    differentiate disease-mediating from peripheral genes or reveal trans-regulatory networks.
+
+- Challenges with Cis-eQTLs in Disease Gene Discovery:
+  - Disease genes often lack strong cis-QTL signals due to stronger selective constraints.
+  - Cis-eQTL limitations necessitate focusing on trans-QTLs, as their target genes share similar
+  selective constraints with disease genes.
+
+- Significance of Trans-Regulation:
+  - Trans-regulatory networks explain a large portion (~70%) of disease heritability.
+  - Understanding trans-regulation provides insights into collaborative gene contributions to disease
+  risk and highlights the importance of completing trans-gene regulatory networks for understanding
+  complex trait genetics.
+
+#### COTA
+- COTA Model: Integrates trans-regulatory effects to identify disease-mediating genes.
+
+- GBAT: Predicts gene expression using machine learning models.
+
+![](assets/image7.png){width="80%"}
+
+- DACT: Estimates gene effects from burden tests.
 
 
-- By reading a file
-```{r echo=TRUE}
-res = read.table('./data/file_res.txt', header = TRUE, sep = "\t", stringsAsFactors = TRUE)
-knitr::kable(res)
-```
+![](assets/image8.png){width="80%"}
+
+#### Findings
+
+- COTA enhances GWAS interpretability by revealing trans-regulatory networks.
+
+- New gene discoveries provide insights into disease mechanisms.
+
+- Potential for targeted therapy development based on genetic findings.
+
+#### Code
+
+- Codes for COTA are in [COTA Package.](https://github.com/mxxptian/COTA/tree/d211df91c43826ae56adfa30b39d506716921ba7)
+
+- Summary of codes are in [code summary.](https://docs.google.com/document/d/1i0V_S7Yh-XlwvDcbUzki3WhIxmeUiaPs_Eazlr4lhys/edit?tab=t.0) 
 
 
-### 5. Insert links
+## Data
+### Whole Exon Sequencing 
 
-- Link to a website
-
-Link to [google](https://www.google.com/) by `[google](https://www.google.com/)`.
-
-- Link to a file
-
-Link to [file](assets/logo.png) by `[file](docs/assets/logo.png)`.
-
-- Link to a header
-
-Link to [another header](2022.html#header-of-another-section) by `[another header](2022.html#header-of-another-section)`.
-
-
-## Another week {#header-of-another-section}
-
-### 1. Analysis 1
-
-#### Analysis
-
-#### Figures, tables
-
-#### Observations
+#### Files
+- UC: Burden tests with UC only
+- CD: Burden tests with CD only
+- IBD: Burden tests with other types of IBD
+  
+### Variants analyzed
+- NSYN: Non-synonymous Variants
+  - nsyn.singleton: variants appear only once across all samples
+  - nsyn.0.001: allele frequancy less than 0.001
+- NSYN_AM: Non-synonymous variants with an AlphaMissense score greater than 0.2
+  - nsyn.singleton: variants appear only once across all samples
+  - nsyn.0.001: allele frequancy less than 0.001
+- pLoF: PTV variants that are also flagged as high confidence (HC) by Loftee
+  - pLoF.singleton: variants appear only once across all samples
+  - pLoF.nsyn.0.001: allele frequancy less than 0.001
 
 
+#### Variables 
+- MarkerName: Gene name
+- Allele1: Study allele
+- Allele2: Ref allele
+- Freq1: Allele frequency of Allele1
+- Effect: Effect size
+- StdErr: Standrad error of effect size
+- log(P): Log p-value of effect size
+- Direction: Direction of effect size from two platform 
+- HetISq: Heterogeneity statistics I-square
+- HetChiSq: Chi-square statistics for heterogeneity that effect for two platform are come from same distribution
+- HetDf: Degree of freedom
+- logHetP: Log p-value of HetChiSq
+  
+#### EDA of data
+- Basic visualizations of **p-values** were performed, including **QQ plots** and **histograms**, for burden tests involving **singleton** and **<0.001 NSYN/LoF variants** in **Crohn’s Disease (CD)**.  
+  - The overall distribution of **p-values** for **CD with NSYN and LoF variants** appears nearly identical.  
+  - Using a uniform distribution, the points predominantly align with the line, exhibiting slight curvature.
+  
+![](assets/image10.png){width="50%"}
 
-### 2. Analysis 2
+![](assets/image11.png){width="50%"}
+
+- Significant heterogeneity across all **nine studies** was assessed.  
+  - Two genes met the significance threshold of **0.05/20,000** (**total genes: 18,641**):  
+    - **SULT1A1 (Sulfotransferase Family 1A Member 1):** Encodes sulfotransferase enzymes that facilitate
+    **sulfate conjugation** of various hormones, neurotransmitters, drugs, and xenobiotic compounds.
+    These cytosolic enzymes differ in **tissue distribution** and **substrate specificity**.  
+    - **PLXND1 (Plexin D1):** Enables **protein domain-specific binding activity** and is involved in
+    **axonogenesis regulation**, **semaphorin-plexin signaling**, and **synapse assembly**. Also plays a
+    role in **circulatory system development**, **salivary gland branching**, and **kidney development**,
+    and is primarily located in **lamellipodia**.  
+  - The paper reported **43 sites** with significant heterogeneity, whereas only **two genes** were
+  identified in this analysis.  
+  - The original study applied a **heterogeneity-of-effect test** between the **Nextera** and **Twist
+  discovery cohorts** using **IVW PHET < 0.0001** as the threshold.  
+  - The discrepancy may be due to **differences in heterogeneity statistics** and a **more lenient
+  p-value cutoff** in this analysis.  
+  - When **0.0001** was used as the threshold, **32 genes** exhibited significant heterogeneity,
+  including **SULT1A1 and PLXND1**.  
+
+- **Basic summary of genes in the WES dataset**:  
+  - **18,641 genes** are present in the dataset.  
+  - **15,309 genes** are included in **all nine studies**.  
+  - **3,332 genes** are shared across some but not all studies.  
+  - In the **CD with NSYN 0.01 study**, **64 genes** lack **burden tests on singleton variants**.  
+  - Some genes do not have variants that appear in only one sample.
+  
+![](assets/image12.png){width="80%"}
+
+![](assets/image13.png){width="80%"}
+
+### Trans Effect
+
+- trans-eQTL: 
+  - eQTLGen
+  - Whole blood
+  
+- GBAT
+
+### GWAS
+
+- The dataset consists of **29,849 East Asian samples** from China, Hong Kong SAR, Japan, and the Republic of Korea, and **368,819 European samples** from the U.S., NR, and Finland.  
+
+- The total number of **cases** in the dataset is **45,106**, while the total number of **controls** is **353,562**.  
+
+- Among the **East Asian cohort**, there are **14,393 cases** and **15,456 controls**.  
+
+- Among the **European cohort**, there are **30,713 cases** and **338,106 controls**.  
+
+- The majority of cases are diagnosed with **Crohn’s Disease (CD)** and **Ulcerative Colitis (UC)**, with a smaller number of **other Inflammatory Bowel Disease (IBD) cases**.  
+
+- The **East Asian samples represent approximately 7.5%** of the total dataset.
+
+
+![](assets/image9.png){width="80%"}
+
+## Analysis
+
+### Data
+#### WES Data
+- CD with Variant Frequency less than 0.001
+- Total Genes: 18,620
+
+#### Genes Detected by WES
+- Total of 32 significant genes.
+- **Key Genes Identified**:
+  - **NOD2**: Plays a role in **autophagy**, aiding in the destruction of bacteria, viruses, and harmful substances.
+  - **SBNO2**: Differentially regulated by **lipopolysaccharide and IL-10** ([Nature Link](https://www.nature.com/articles/s41467-024-47218-3)).
+  - **ATG4C**: Involved in **autophagy**, the process of degrading proteins and organelles.
+  - **IGHV Family**: Immunoglobulin heavy variable genes.
+  - **AHNAK2**: Encodes a **large nucleoprotein**.
+
+### SNP-Based Analysis
+- GWAS Significant SNPs (*p* < 1e-4): 69,654 SNPs
+  - Overlap with trans-eQTL SNPs: 1033 SNPs
+- Total Trans-eQTL SNPs: 10,317
+
+### Gene-Based Analysis
+- GWAS Significant Genes** (*p* < 1e-4): 69,654 SNPs
+  - Overlap of GWAS Nearest Gene with GBAT trans regulation target: 2134
+- Total Trans-eQTL Gene1: 13,634
+
+
+## Findings
+
+### Genes Detected by COTA (SNP-Based)
+- **Significant Gene Pairs**:
+  - Shown in [significant gene pairs]()
+  
+- **WES Significant Gene2**: NOD2, SBNO2
+
+- **WES Non-Significant Gene2**: CARD9, CEACAM8, USP36
+
+- **Network of detected gene**:
+
+
+![](assets/network_snp.pdf){width="80%"}
+
+
+### Genes Detected by COTA (Gene-Based)
+- **Significant Gene Pairs**:
+  - Shown in [significant gene pairs]()
+  
+- **WES Significant Gene2**: NOD2, AHNAK2
+
+- **WES Non-Significant Gene2**: SH3YL1, TMED6, CEP104, SPIRE2, ING1, EGLN3, PLEKHO2, EML4, ALOX5
+  
+
+- **Network of detected gene**:
+
+![](assets/network_gene.pdf){width="80%"}
+
+
+## Discussion
+
+### Why most of burden tests significant genes are not detected by COTA
+
+#### Check the overlap of burden tests significant genes and trans regulation target
+
+- SNP based
+  - 5 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis. 
+  
+![](assets/image14.png){width="80%"}
+  
+- Gene based
+  - 6 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans regulation targets used for analysis.
+  
+![](assets/image15.png){width="80%"}
+
+
+## Next Steps
+1. **Map GWAS Loci**
+   - Utilize **SNPeff** and **Fine-mapping**
+   - Apply **ABC method** ([Nature Link](https://www.nature.com/articles/s41586-024-07022-x))
+2. **Perform Perturb-seq for trans-effects**
+   - Utilize **CRISPRi**
+   - Direct application in **COTA analysis** ([Nature Link](https://www.nature.com/articles/s41586-024-07022-x))
+
+
+
+
+
 
