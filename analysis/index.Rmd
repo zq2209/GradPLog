@@ -1,5 +1,5 @@
 ---
-title: "**Research Progress Template (Liu Lab)**"
+title: "**Research Progress (Liu Lab)**"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
