@@ -377,7 +377,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-ok text-success"
+workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -388,8 +388,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
-</a>
+class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -398,13 +398,13 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-02-03
+<strong>Last updated:</strong> 2025-02-04
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 0
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>GradPLog/</code> <span
@@ -427,18 +427,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -529,15 +532,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree5d888da9d9e457454dd3f8ae3dd849efeb67c8bctargetblank5d888daa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree88de21396e93d1aeda568d275f377300ca4c9377targetblank88de213a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/5d888da9d9e457454dd3f8ae3dd849efeb67c8bc" target="_blank">5d888da</a>
+<a href="https://github.com/zq2209/GradPLog/tree/88de21396e93d1aeda568d275f377300ca4c9377" target="_blank">88de213</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree5d888da9d9e457454dd3f8ae3dd849efeb67c8bctargetblank5d888daa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree88de21396e93d1aeda568d275f377300ca4c9377targetblank88de213a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -547,7 +550,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/5d888da9d9e457454dd3f8ae3dd849efeb67c8bc" target="_blank">5d888da</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/88de21396e93d1aeda568d275f377300ca4c9377" target="_blank">88de213</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -564,6 +567,9 @@ were generated:
 Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rproj.user/
+
+Unstaged changes:
+    Modified:   analysis/2025.Rmd
 
 </code></pre>
 <p>
@@ -607,6 +613,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/927813ba777c8584121380da9fe875ca0c8413d3/analysis/2025.Rmd" target="_blank">927813b</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-04
+</td>
+<td>
+build_site
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/dd58251b25b5fb042bd64723f41fe9ae216cc20a/docs/2025.html" target="_blank">dd58251</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1390,7 +1430,7 @@ nucleoprotein</strong>.</li>
 USP36</p></li>
 <li><p><strong>Network of detected gene</strong>:</p></li>
 </ul>
-<p><embed src="assets/network_snp.pdf" style="width:100.0%" /></p>
+<p><img src="assets/network_snp.png" style="width:100.0%" /></p>
 </div>
 <div id="genes-detected-by-cota-gene-based" class="section level4">
 <h4>Genes Detected by COTA (Gene-Based)</h4>
@@ -1404,7 +1444,7 @@ USP36</p></li>
 CEP104, SPIRE2, ING1, EGLN3, PLEKHO2, EML4, ALOX5</p></li>
 <li><p><strong>Network of detected gene</strong>:</p></li>
 </ul>
-<p><embed src="assets/network_gene.pdf" style="width:100.0%" /></p>
+<p><img src="assets/network_gene.png" style="width:100.0%" /></p>
 </div>
 </div>
 </div>
@@ -1429,7 +1469,7 @@ regulation target</h5>
 SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis.</li>
 </ul></li>
 </ul>
-<p><img src="assets/image14.png" style="width:80.0%" /></p>
+<p><img src="assets/image14.png" style="width:60.0%" /></p>
 <ul>
 <li>Gene based
 <ul>
@@ -1438,10 +1478,128 @@ SBNO2, ATG4C) overlap with the trans regulation targets used for
 analysis.</li>
 </ul></li>
 </ul>
-<p><img src="assets/image15.png" style="width:80.0%" /></p>
+<p><img src="assets/image15.png" style="width:60.0%" /> ##### Check DGN
+matrix There are still 5 significant burden test genes (AHNAK2, DNMT3A,
+NOD2, SBNO2, ATG4C) overlapped with DGN.</p>
+</div>
+<div id="check-gtex" class="section level5">
+<h5>Check GTEx</h5>
+<ul>
+<li><p>Bulk gene expression have all the significant burden test
+genes.</p></li>
+<li><p>Missed burden test significant genes</p>
+<ul>
+<li><p>immunoglobulin heavy joining</p>
+<ul>
+<li>IGHJ4 (immunoglobulin heavy joining 4; chr14:105864215-105864260:-):
+Highly expressed at Cells - EBV-transformed lymphocytes and Spleen,
+intermediate expression in Whole blood</li>
+</ul>
+<p><img src="assets/IGHJ4_tpm.png" style="width:80.0%" /></p></li>
+<li><p>immunoglobulin heavy variable</p>
+<ul>
+<li>IGHV4-34 (immunoglobulin heavy variable 4-34;
+chr14:106373663-106374145:-): Highly expressed at Cells -
+EBV-transformed lymphocytes</li>
+</ul>
+<p><img src="assets/IGHV4-34_tpm.png" style="width:80.0%" /></p></li>
+<li><p>immunoglobulin kappa joining</p>
+<ul>
+<li>IGKJ1 (immunoglobulin kappa joining 1; chr2:88861886-88861923:-):
+Highly expressed at Cells - EBV-transformed lymphocytes, intermediate
+expression in Spleen and Colon - Transverse, Small Intestine - Terminal
+Ileum, Minor Salivary Gland</li>
+</ul>
+<p><img src="assets/IGKJ1_tpm.png" style="width:80.0%" /></p></li>
+<li><p>immunoglobulin kappa variable</p></li>
+<li><p>IGKV4-1 (immunoglobulin kappa variable 4-1;
+chr2:88885397-88886153:+): Highly expressed at Cells - EBV-transformed
+lymphocytes</p></li>
+</ul>
+<p><img src="assets/IGKV4-1_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li>immunoglobulin heavy diversity
+<ul>
+<li>IGHD3-16 (immunoglobulin heavy diversity 3-16;
+chr14:105895634-105895670:-): Highly expressed at Lung, Cells -
+EBV-transformed lymphocytes, and Spleen</li>
+</ul>
+<img src="assets/IGHD3-16_tpm.png" style="width:80.0%" /></li>
+</ul></li>
+<li><p>TNFRSF6B (TNF receptor superfamily member 6b;
+chr20:63696652-63698641:+): Highly expressed in Lung???</p></li>
+</ul>
+<p><img src="assets/TNFRSF6B_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li><p>Overlapped burden test significant genes</p>
+<ul>
+<li>NOD2 (nucleotide binding oligomerization domain containing 2;
+chr16:50693588-50734041:+): Expression in Whole Blood are higher than
+others</li>
+</ul>
+<p><img src="assets/NOD2_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li>ATG4C (autophagy related 4C cysteine peptidase;
+chr1:62784132-62865516:+): Expressed in all tissues, higher expression
+in brain tissue</li>
+</ul>
+<p><img src="assets/ATG4C_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li>SBNO2 (strawberry notch homolog 2; chr19:1107637-1174268:-):
+Expression in Whole Blood are higher than others</li>
+</ul>
+<p><img src="assets/SBNO2_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li>AHNAK2 (AHNAK nucleoprotein 2; chr14:104937762-104978374:-): Higher
+expression in skin tissue then whole blood</li>
+</ul>
+<p><img src="assets/AHNAK_tpm.png" style="width:80.0%" /></p>
+<ul>
+<li>DNMT3A (DNA methyltransferase 3 alpha; chr2:25227855-25342590:-):
+Expressed in all tissues, no really extream TPM values in some
+tissue</li>
+</ul>
+<p><img src="assets/DNMT3A_tpm.png" style="width:80.0%" /></p></li>
+<li><p>Check TPM of genes on bulk data</p>
+<ul>
+<li>Near all gene expression for those missed genes in trans effect are
+higher, probably due to have extreme high TPM in some tissues, whereas
+those overlapped genes don’t have such extreme expression.</li>
+</ul>
+<p><img src="assets/bulk_tpm.png" style="width:80.0%" /></p></li>
+</ul>
 </div>
 </div>
 </div>
+<div id="perturb-seq-data" class="section level3">
+<h3>Perturb-seq data</h3>
+<ul>
+<li>How does the data generated
+<ul>
+<li>what is cell line</li>
+<li>trans regulation target, gene_id?
+<ul>
+<li>direction of correlation, which one regulate which?</li>
+</ul></li>
+<li>overlap of burden test significant genes and target genes is larger
+<ul>
+<li>13407 total regulator, and all 32 burden test genes are in
+regulator</li>
+<li>4165 of trans target, 20 burden test genes are in trans target</li>
+</ul></li>
+<li>QTL calculation
+<ul>
+<li>why negative binomial
+<ul>
+<li>Count data that over dispersed?</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="week-6-feb-10---feb-16" class="section level2">
+<h2>Week 6: Feb 10 - Feb 16</h2>
 <div id="next-steps" class="section level3">
 <h3>Next Steps</h3>
 <ol style="list-style-type: decimal">
