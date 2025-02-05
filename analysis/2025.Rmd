@@ -369,7 +369,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 - **Network of detected gene**:
 
 
-![](assets/network_snp.pdf){width="100%"}
+![](assets/network_snp.png){width="100%"}
 
 
 #### Genes Detected by COTA (Gene-Based)
@@ -383,7 +383,7 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 - **Network of detected gene**:
 
-![](assets/network_gene.pdf){width="100%"}
+![](assets/network_gene.png){width="100%"}
 
 
 ## Week 5: Feb 3 - Feb 9
@@ -397,12 +397,90 @@ reflect the importance or therapeutic relevance of their underlying biological p
 - SNP based
   - 5 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis. 
   
-![](assets/image14.png){width="80%"}
+![](assets/image14.png){width="60%"}
   
 - Gene based
   - 6 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans regulation targets used for analysis.
   
-![](assets/image15.png){width="80%"}
+![](assets/image15.png){width="60%"}
+##### Check DGN matrix
+There are still 5 significant burden test genes (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlapped with DGN.
+
+##### Check GTEx 
+
+- Bulk gene expression have all the significant burden test genes. 
+- Missed burden test significant genes 
+  - immunoglobulin heavy joining
+    - IGHJ4 (immunoglobulin heavy joining 4; chr14:105864215-105864260:-): Highly expressed at Cells - EBV-transformed lymphocytes and Spleen, intermediate expression in Whole blood
+    
+    ![](assets/IGHJ4_tpm.png){width="80%"}
+    
+  - immunoglobulin heavy variable
+    - IGHV4-34 (immunoglobulin heavy variable 4-34; chr14:106373663-106374145:-): Highly expressed at Cells - EBV-transformed lymphocytes
+    
+    ![](assets/IGHV4-34_tpm.png){width="80%"}
+    
+  - immunoglobulin kappa joining 
+    - IGKJ1 (immunoglobulin kappa joining 1; chr2:88861886-88861923:-): Highly expressed at Cells - EBV-transformed lymphocytes, intermediate expression in Spleen and Colon - Transverse, Small Intestine - Terminal Ileum, Minor Salivary Gland
+    
+    ![](assets/IGKJ1_tpm.png){width="80%"}
+    
+  - immunoglobulin kappa variable
+   - IGKV4-1 (immunoglobulin kappa variable 4-1; chr2:88885397-88886153:+): Highly expressed at Cells - EBV-transformed lymphocytes
+    
+    ![](assets/IGKV4-1_tpm.png){width="80%"}
+    
+  - immunoglobulin heavy diversity
+    - IGHD3-16 (immunoglobulin heavy diversity 3-16; chr14:105895634-105895670:-): Highly expressed at Lung, Cells - EBV-transformed lymphocytes, and Spleen
+    
+    ![](assets/IGHD3-16_tpm.png){width="80%"}
+    
+ - TNFRSF6B (TNF receptor superfamily member 6b; chr20:63696652-63698641:+): Highly expressed in Lung???
+ 
+  ![](assets/TNFRSF6B_tpm.png){width="80%"}
+
+- Overlapped burden test significant genes
+  - NOD2 (nucleotide binding oligomerization domain containing 2; chr16:50693588-50734041:+): Expression in Whole Blood are higher than others
+  
+  ![](assets/NOD2_tpm.png){width="80%"}
+  
+  - ATG4C (autophagy related 4C cysteine peptidase; chr1:62784132-62865516:+): Expressed in all tissues, higher expression in brain tissue
+  
+  ![](assets/ATG4C_tpm.png){width="80%"}
+  
+  - SBNO2 (strawberry notch homolog 2; chr19:1107637-1174268:-): Expression in Whole Blood are higher than others
+  
+  ![](assets/SBNO2_tpm.png){width="80%"}
+  
+  - AHNAK2 (AHNAK nucleoprotein 2; chr14:104937762-104978374:-): Higher expression in skin tissue then whole blood
+  
+  ![](assets/AHNAK_tpm.png){width="80%"}
+  
+  - DNMT3A (DNA methyltransferase 3 alpha; chr2:25227855-25342590:-): Expressed in all tissues, no really extream TPM values in some tissue
+  
+  ![](assets/DNMT3A_tpm.png){width="80%"}
+  
+- Check TPM of genes on different tissue
+  - Near all have extreme high expression in Cells - EBV-transformed lymphocytes for those missed in eQTLGen and GBAT
+  
+
+### Perturb-seq data
+- How does the data generated
+  - what is cell line
+  - trans regulation target, gene_id?
+    - direction of correlation, which one regulate which?
+  - overlap of burden test significant genes and target genes is larger
+    - 13407 total regulator, and all 32 burden test genes are in regulator 
+    - 4165 of trans target, 20 burden test genes are in trans target
+  - QTL calculation
+    - why negative binomial
+      - Count data that over dispersed?
+
+  
+  
+## Week 6: Feb 10 - Feb 16
+
+
 
 
 ### Next Steps
