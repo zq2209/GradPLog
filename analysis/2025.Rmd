@@ -403,7 +403,9 @@ reflect the importance or therapeutic relevance of their underlying biological p
   - 6 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans regulation targets used for analysis.
   
 ![](assets/image15.png){width="60%"}
+
 ##### Check DGN matrix
+
 There are still 5 significant burden test genes (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlapped with DGN.
 
 ##### Check GTEx 
