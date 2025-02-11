@@ -388,11 +388,37 @@ reflect the importance or therapeutic relevance of their underlying biological p
 
 ## Week 5: Feb 3 - Feb 9
 
-### Discussion
+### Perturb-seq data
+How does the data generated   
 
-#### Why most of burden tests significant genes are not detected by COTA
+- what is cell line   
 
-##### Check the overlap of burden tests significant genes and trans regulation target
+- trans regulation target, gene_id? 
+
+  - direction of correlation, which one regulate which?      
+  
+- overlap of burden test significant genes and target genes is larger      
+
+  - 13407 total regulator, and all 32 burden test genes are in regulator    
+  
+  - 4165 of trans target, 20 burden test genes are in trans target    
+  
+- QTL calculation
+
+  - why negative binomial 
+    
+    - Count data that over dispersed?     
+
+  
+  
+## Week 6: Feb 10 - Feb 16
+
+
+## Discussion
+
+### Why most of burden tests significant genes are not detected by COTA
+
+#### Check the overlap of burden tests significant genes and trans regulation target
 
 - SNP based
   - 5 significant genes from the burden tests (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlap with the trans-eQTL genes used for analysis. 
@@ -404,11 +430,11 @@ reflect the importance or therapeutic relevance of their underlying biological p
   
 ![](assets/image15.png){width="60%"}
 
-##### Check DGN matrix
+#### Check DGN matrix
 
 There are still 5 significant burden test genes (AHNAK2, DNMT3A, NOD2, SBNO2, ATG4C) overlapped with DGN.
 
-##### Check GTEx 
+#### Check GTEx 
 
 - Bulk gene expression have all the significant burden test genes. 
 - Missed burden test significant genes 
@@ -467,33 +493,37 @@ There are still 5 significant burden test genes (AHNAK2, DNMT3A, NOD2, SBNO2, AT
   
   ![](assets/bulk_tpm.png){width="80%"}
 
-### Perturb-seq data
-How does the data generated   
 
-- what is cell line   
+### Why there are many more significant genes than Sazonovs et al 2022
 
-- trans regulation target, gene_id? 
+- The data shared to us are different than 2022, we have newer version of their results.
 
-  - direction of correlation, which one regulate which?      
+  - Samples are different than what used in 2022 paper, the sample size are similar but samples are different.
   
-- overlap of burden test significant genes and target genes is larger      
-
-  - 13407 total regulator, and all 32 burden test genes are in regulator    
+  - New exome capture method that could capture exome region previously not included. 
   
-  - 4165 of trans target, 20 burden test genes are in trans target    
+- Genes may also be not totally consistent with 2022
+
+  - Version of gene annotation are different in two platform
   
-- QTL calculation
+- Immunoglobulin genes are filtered out in the analysis by thinking it as artifact
 
-  - why negative binomial 
-    
-    - Count data that over dispersed?     
-
+  - The samples in the consortium come from different hospitals   
   
-  
-## Week 6: Feb 10 - Feb 16
+  - There is a possibility that a small number of immortalized cell line samples may have been mixed in.  
+  - These cell lines are derived from some B cells, and immunoglobulin gene region in B cells is highly recombinant.
 
 
 
+## Q&A on the Project
+
+1. Why just burden test
+
+- Can be flexible to many gene effect methods
+
+2. Why not leverage cis effect
+
+- Cis effect may not be detected due to stronger selective constraints. 
 
 ### Next Steps
 1. **Map GWAS Loci**
