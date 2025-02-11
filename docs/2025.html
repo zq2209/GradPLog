@@ -398,7 +398,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-02-05
+<strong>Last updated:</strong> 2025-02-10
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -529,15 +529,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree1dc0e4de18987d7720f14050abab73dab4f61444targetblank1dc0e4da">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree15f4806f4d42127b970fedefe07983434cd5d8cctargetblank15f4806a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/1dc0e4de18987d7720f14050abab73dab4f61444" target="_blank">1dc0e4d</a>
+<a href="https://github.com/zq2209/GradPLog/tree/15f4806f4d42127b970fedefe07983434cd5d8cc" target="_blank">15f4806</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree1dc0e4de18987d7720f14050abab73dab4f61444targetblank1dc0e4da"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree15f4806f4d42127b970fedefe07983434cd5d8cctargetblank15f4806a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -547,7 +547,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/1dc0e4de18987d7720f14050abab73dab4f61444" target="_blank">1dc0e4d</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/15f4806f4d42127b970fedefe07983434cd5d8cc" target="_blank">15f4806</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -607,6 +607,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/15f4806f4d42127b970fedefe07983434cd5d8cc/analysis/2025.Rmd" target="_blank">15f4806</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-10
+</td>
+<td>
+build site
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/70deb4c897017f193c628aacb093824cdd79adcd/docs/2025.html" target="_blank">70deb4c</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-05
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1699,18 +1733,48 @@ CEP104, SPIRE2, ING1, EGLN3, PLEKHO2, EML4, ALOX5</p></li>
 </div>
 <div id="week-5-feb-3---feb-9" class="section level2">
 <h2>Week 5: Feb 3 - Feb 9</h2>
-<div id="discussion" class="section level3">
-<h3>Discussion</h3>
+<div id="perturb-seq-data" class="section level3">
+<h3>Perturb-seq data</h3>
+<p>How does the data generated</p>
+<ul>
+<li><p>what is cell line</p></li>
+<li><p>trans regulation target, gene_id?</p>
+<ul>
+<li>direction of correlation, which one regulate which?</li>
+</ul></li>
+<li><p>overlap of burden test significant genes and target genes is
+larger</p>
+<ul>
+<li><p>13407 total regulator, and all 32 burden test genes are in
+regulator</p></li>
+<li><p>4165 of trans target, 20 burden test genes are in trans
+target</p></li>
+</ul></li>
+<li><p>QTL calculation</p>
+<ul>
+<li><p>why negative binomial</p>
+<ul>
+<li>Count data that over dispersed?</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="week-6-feb-10---feb-16" class="section level2">
+<h2>Week 6: Feb 10 - Feb 16</h2>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
 <div
 id="why-most-of-burden-tests-significant-genes-are-not-detected-by-cota"
-class="section level4">
-<h4>Why most of burden tests significant genes are not detected by
-COTA</h4>
+class="section level3">
+<h3>Why most of burden tests significant genes are not detected by
+COTA</h3>
 <div
 id="check-the-overlap-of-burden-tests-significant-genes-and-trans-regulation-target"
-class="section level5">
-<h5>Check the overlap of burden tests significant genes and trans
-regulation target</h5>
+class="section level4">
+<h4>Check the overlap of burden tests significant genes and trans
+regulation target</h4>
 <ul>
 <li>SNP based
 <ul>
@@ -1729,13 +1793,13 @@ analysis.</li>
 </ul>
 <p><img src="assets/image15.png" style="width:60.0%" /></p>
 </div>
-<div id="check-dgn-matrix" class="section level5">
-<h5>Check DGN matrix</h5>
+<div id="check-dgn-matrix" class="section level4">
+<h4>Check DGN matrix</h4>
 <p>There are still 5 significant burden test genes (AHNAK2, DNMT3A,
 NOD2, SBNO2, ATG4C) overlapped with DGN.</p>
 </div>
-<div id="check-gtex" class="section level5">
-<h5>Check GTEx</h5>
+<div id="check-gtex" class="section level4">
+<h4>Check GTEx</h4>
 <ul>
 <li><p>Bulk gene expression have all the significant burden test
 genes.</p></li>
@@ -1822,36 +1886,53 @@ those overlapped genes don’t have such extreme expression.</li>
 </ul>
 </div>
 </div>
-</div>
-<div id="perturb-seq-data" class="section level3">
-<h3>Perturb-seq data</h3>
-<p>How does the data generated</p>
+<div
+id="why-there-are-many-more-significant-genes-than-sazonovs-et-al-2022"
+class="section level3">
+<h3>Why there are many more significant genes than Sazonovs et al
+2022</h3>
 <ul>
-<li><p>what is cell line</p></li>
-<li><p>trans regulation target, gene_id?</p>
+<li><p>The data shared to us are different than 2022, we have newer
+version of their results.</p>
 <ul>
-<li>direction of correlation, which one regulate which?</li>
+<li><p>Samples are different than what used in 2022 paper, the sample
+size are similar but samples are different.</p></li>
+<li><p>New exome capture method that could capture exome region
+previously not included.</p></li>
 </ul></li>
-<li><p>overlap of burden test significant genes and target genes is
-larger</p>
+<li><p>Genes may also be not totally consistent with 2022</p>
 <ul>
-<li><p>13407 total regulator, and all 32 burden test genes are in
-regulator</p></li>
-<li><p>4165 of trans target, 20 burden test genes are in trans
-target</p></li>
+<li>Version of gene annotation are different in two platform</li>
 </ul></li>
-<li><p>QTL calculation</p>
+<li><p>Immunoglobulin genes are filtered out in the analysis by thinking
+it as artifact</p>
 <ul>
-<li><p>why negative binomial</p>
-<ul>
-<li>Count data that over dispersed?</li>
-</ul></li>
+<li><p>The samples in the consortium come from different
+hospitals</p></li>
+<li><p>There is a possibility that a small number of immortalized cell
+line samples may have been mixed in.<br />
+</p></li>
+<li><p>These cell lines are derived from some B cells, and
+immunoglobulin gene region in B cells is highly recombinant.</p></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="week-6-feb-10---feb-16" class="section level2">
-<h2>Week 6: Feb 10 - Feb 16</h2>
+<div id="qa-on-the-project" class="section level2">
+<h2>Q&amp;A on the Project</h2>
+<ol style="list-style-type: decimal">
+<li>Why just burden test</li>
+</ol>
+<ul>
+<li>Can be flexible to many gene effect methods</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Why not leverage cis effect</li>
+</ol>
+<ul>
+<li>Cis effect may not be detected due to stronger selective
+constraints.</li>
+</ul>
 <div id="next-steps" class="section level3">
 <h3>Next Steps</h3>
 <ol style="list-style-type: decimal">
