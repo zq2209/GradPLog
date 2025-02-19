@@ -580,7 +580,7 @@ df <- data.frame(
 )
 
 # Print the table using kable
-kable(df, format = "latex", digits = 6, booktabs = TRUE) %>%
+kable(df, format = "html", digits = 6) %>%
   kable_styling(full_width = FALSE) %>%
   column_spec(1, width = "3cm") %>%
   column_spec(2, width = "3cm")
