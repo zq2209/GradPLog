@@ -514,6 +514,92 @@ There are still 5 significant burden test genes (AHNAK2, DNMT3A, NOD2, SBNO2, AT
   - These cell lines are derived from some B cells, and immunoglobulin gene region in B cells is highly recombinant.
 
 
+## Week 7: Feb 17 - Feb 23
+
+### Integrate perturb data with COTA
+
+#### Preprocessing data
+
+- Originally 14680 targets; 4734 regulators
+
+- Apply two steps filter on genes
+
+  - Filter out genes that don't have a matched gene name
+  
+    - drop 1536 targets and 1 regulator 
+    
+  - Select regulators that are GWAS gens (nearest genes of GWAS loci)
+  
+    - 12730 targets and 1337 regulators remain for analysis
+    
+- Among 12370 targets, 4 WES significant genes were included. 
+  
+  - DNMT3A, TNFRSF6B, ATG4C, SBNO2
+  
+  - NOD2 and AHNAK2 were not included in targets
+  
+- NAs in the p-value matrix of 12730 targets (rows) and 1337 regulators (columns)
+
+  - These pairs (regulator - target) don't exist in the perturb-seq result
+  
+  - Fill in with 0.99 to make sure COTA analysis can be applied
+  
+  
+#### Visualization of pvalue 
+
+- Basic visualizations of **p-values** were performed, including **QQ plots** and **histograms**, for all the gene pairs and filtered gene pairs (GWAS pairs).  
+
+  - The overall distribution of **p-values** for all pairs and GWAS pairs appears nearly identical.  
+  
+  - Using a uniform distribution, the points predominantly align with the line, exhibiting slight curvature.
+  
+**Distribution of p-value for all pairs** 
+
+![](assets/perturb_pval_hist.png){width="50%"}
+
+![](assets/perturb_pval_qq.png){width="50%"}
+
+**Distribution of p-value for GWAS pairs** 
+
+![](assets/perturb_pval_hist_gwas_genes.png){width="50%"}
+
+![](assets/perturb_pval_qq_gwas_genes.png){width="50%"}
+
+#### Results
+
+- Two WES significant genes are also detected by COTA:
+  
+  - DNMT3A, TNFRSF6B
+  
+
+|           | DNMT3A      | TNFRSF6B    |
+|-----------|------------|------------|
+| Min       | 0.0000489864 | 0.000121661 |
+| Max       | 0.9990190000 | 0.999877000 |
+| Mean      | 0.5010033048 | 0.489069067 |
+| Median    | 0.4999820000 | 0.471279000 |
+| SD        | 0.2954533975 | 0.306062442 |
+
+  
+- ATG4C and SBNO2 are not detected by COTA
+
+  - Check the trans effect of these two genes in perturb-seq data 
+
+|           | ATG4C      | SBNO2      |
+|-----------|-----------|-----------|
+| Min       | 0.000533211 | 0.000259479 |
+| Max       | 0.999828000 | 0.997488000 |
+| Mean      | 0.491614086 | 0.507823398 |
+| Median    | 0.489878000 | 0.492926000 |
+| SD        | 0.292780373 | 0.296452133 |
+
+
+- CARD9 is again detected by COTA
+
+- Network
+
+![](assets/network_perturb.png){width="90%"}
+
 
 ## Q&A on the Project
 
