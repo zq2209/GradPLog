@@ -398,7 +398,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-02-11
+<strong>Last updated:</strong> 2025-02-19
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -529,15 +529,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree103cb30a5da4b24ee376579bca2422a299a367c3targetblank103cb30a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreeb26e62d562d6de757116041774b136a015118f8btargetblankb26e62da">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/103cb30a5da4b24ee376579bca2422a299a367c3" target="_blank">103cb30</a>
+<a href="https://github.com/zq2209/GradPLog/tree/b26e62d562d6de757116041774b136a015118f8b" target="_blank">b26e62d</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree103cb30a5da4b24ee376579bca2422a299a367c3targetblank103cb30a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreeb26e62d562d6de757116041774b136a015118f8btargetblankb26e62da"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -547,7 +547,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/103cb30a5da4b24ee376579bca2422a299a367c3" target="_blank">103cb30</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/b26e62d562d6de757116041774b136a015118f8b" target="_blank">b26e62d</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -607,6 +607,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/b26e62d562d6de757116041774b136a015118f8b/analysis/2025.Rmd" target="_blank">b26e62d</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-19
+</td>
+<td>
+build sites
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/885485521c634a9600121ac3ea25d838e85b8fa4/docs/2025.html" target="_blank">8854855</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1950,6 +1984,157 @@ line samples may have been mixed in.<br />
 immunoglobulin gene region in B cells is highly recombinant.</p></li>
 </ul></li>
 </ul>
+</div>
+</div>
+<div id="week-7-feb-17---feb-23" class="section level2">
+<h2>Week 7: Feb 17 - Feb 23</h2>
+<div id="integrate-perturb-data-with-cota" class="section level3">
+<h3>Integrate perturb data with COTA</h3>
+<div id="preprocessing-data" class="section level4">
+<h4>Preprocessing data</h4>
+<ul>
+<li><p>Originally 14680 targets; 4734 regulators</p></li>
+<li><p>Apply two steps filter on genes</p>
+<ul>
+<li><p>Filter out genes that don’t have a matched gene name</p>
+<ul>
+<li>drop 1536 targets and 1 regulator</li>
+</ul></li>
+<li><p>Select regulators that are GWAS gens (nearest genes of GWAS
+loci)</p>
+<ul>
+<li>12730 targets and 1337 regulators remain for analysis</li>
+</ul></li>
+</ul></li>
+<li><p>Among 12370 targets, 4 WES significant genes were included.</p>
+<ul>
+<li><p>DNMT3A, TNFRSF6B, ATG4C, SBNO2</p></li>
+<li><p>NOD2 and AHNAK2 were not included in targets</p></li>
+</ul></li>
+<li><p>NAs in the p-value matrix of 12730 targets (rows) and 1337
+regulators (columns)</p>
+<ul>
+<li><p>These pairs (regulator - target) don’t exist in the perturb-seq
+result</p></li>
+<li><p>Fill in with 0.99 to make sure COTA analysis can be
+applied</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="visualization-of-pvalue" class="section level4">
+<h4>Visualization of pvalue</h4>
+<ul>
+<li><p>Basic visualizations of <strong>p-values</strong> were performed,
+including <strong>QQ plots</strong> and <strong>histograms</strong>, for
+all the gene pairs and filtered gene pairs (GWAS pairs).</p>
+<ul>
+<li><p>The overall distribution of <strong>p-values</strong> for all
+pairs and GWAS pairs appears nearly identical.</p></li>
+<li><p>Using a uniform distribution, the points predominantly align with
+the line, exhibiting slight curvature.</p></li>
+</ul></li>
+</ul>
+<p><strong>Distribution of p-value for all pairs</strong></p>
+<p><img src="assets/perturb_pval_hist.png" style="width:50.0%" /></p>
+<p><img src="assets/perturb_pval_qq.png" style="width:50.0%" /></p>
+<p><strong>Distribution of p-value for GWAS pairs</strong></p>
+<p><img src="assets/perturb_pval_hist_gwas_genes.png"
+style="width:50.0%" /></p>
+<p><img src="assets/perturb_pval_qq_gwas_genes.png"
+style="width:50.0%" /></p>
+</div>
+<div id="results" class="section level4">
+<h4>Results</h4>
+<ul>
+<li><p>Two WES significant genes are also detected by COTA:</p>
+<ul>
+<li>DNMT3A, TNFRSF6B</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>DNMT3A</th>
+<th>TNFRSF6B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min</td>
+<td>0.0000489864</td>
+<td>0.000121661</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>0.9990190000</td>
+<td>0.999877000</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>0.5010033048</td>
+<td>0.489069067</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>0.4999820000</td>
+<td>0.471279000</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>0.2954533975</td>
+<td>0.306062442</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>ATG4C and SBNO2 are not detected by COTA</p>
+<ul>
+<li>Check the trans effect of these two genes in perturb-seq data</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ATG4C</th>
+<th>SBNO2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Min</td>
+<td>0.000533211</td>
+<td>0.000259479</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>0.999828000</td>
+<td>0.997488000</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>0.491614086</td>
+<td>0.507823398</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>0.489878000</td>
+<td>0.492926000</td>
+</tr>
+<tr>
+<td>SD</td>
+<td>0.292780373</td>
+<td>0.296452133</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>CARD9 is again detected by COTA</p></li>
+<li><p>Network</p></li>
+</ul>
+<p><img src="assets/network_perturb.png" style="width:90.0%" /></p>
+</div>
 </div>
 </div>
 <div id="qa-on-the-project" class="section level2">
