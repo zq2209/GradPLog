@@ -573,9 +573,9 @@ library(knitr)
 
 # Create the data frame with rounded values
 df <- data.frame(
-  Statistic = c("Min", "Max", "Mean", "Median", "SD"),
   DNMT3A = round(c(0.0000490, 0.9990190, 0.5010033, 0.4999820, 0.2954534), 7),
-  TNFRSF6B = round(c(0.0001217, 0.9998770, 0.4890691, 0.4712790, 0.3060624), 7)
+  TNFRSF6B = round(c(0.0001217, 0.9998770, 0.4890691, 0.4712790, 0.3060624), 7),
+  row.names = c("Min", "Max", "Mean", "Median", "SD")
 )
 
 # Print the table using kable
@@ -591,9 +591,9 @@ kable(df, format = "markdown", digits = 6)
 ```{r, echo = FALSE}
 # Create the data frame with rounded values for the second table
 df2 <- data.frame(
-  Statistic = c("Min", "Max", "Mean", "Median", "SD"),
   ATG4C = round(c(0.0005332, 0.9998280, 0.4916141, 0.4898780, 0.2927804), 7),
-  SBNO2 = round(c(0.0002595, 0.9974880, 0.5078234, 0.4929260, 0.2964521), 7)
+  SBNO2 = round(c(0.0002595, 0.9974880, 0.5078234, 0.4929260, 0.2964521), 7),
+  row.names = c("Min", "Max", "Mean", "Median", "SD")
 )
 
 # Print the second table using kable
