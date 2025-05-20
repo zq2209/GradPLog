@@ -614,6 +614,78 @@ kable(df2, format = "html", digits = 6) %>%
 
 ![](assets/network_perturb.png){width="100%"}
 
+## Week 8: Feb 24 - Mar 2
+
+### Annotating the networks
+
+After having the networks, the following question is how confident about our result and how to interpret genes identified. To explore this, we annotate these networks as following:  
+
+- GWAS Significance:
+  - Nodes are colored based on GWAS p-values.
+  
+  - Each gene is assigned the smallest p-value from nearby SNP.
+
+  - For regions with multiple genes, the smallest p-value of genes is used.
+  
+- Open Targets Genetics (OTG):
+
+  - Over 5000 genes are associated with CD, but many have low Association Scores.
+  
+  - A threshold of 0.3 was applied, selecting 159 Open Target genes.
+  
+  - Gene names are colored blue.
+
+- WES Genes:
+
+  - Gene names are colored red.
+
+  - Genes present in both Open Targets and WES datasets are colored purple.
+  
+The following are annotated network from perturb-seq data:
+
+![](assets/network_perturb_annotated.png){width="100%"}
+
+Key findings:
+
+A lot of hub are not GWAS significant genes, while peripheral genes are more likely GWAS significant genes. An explanation for this findings is that core genes tend not to be common variants, having more selection pressure. 
+
+
+## Week 9-10: Mar 3 - Mar 16
+
+One of the goal of this project is really to interpret and explain the GWAS findings of IBD. A simple way to do this is to summarize how many GWAS significant loci are core or peripheral genes. We summarize COTA result as the following:
+
+COTA Genes Detected
+
+|                            | COTA peripheral genes | COTA master peripheral genes | COTA core genes | Total number of genes explained in COTA network (peripheral + core) |
+|---------------------------:|---------------------:|----------------------------:|----------------:|--------------------------------------------------------------------:|
+| **SNP Based**              | 5                    | 7                           | 5               | 17                                                                 |
+| **Gene Based**             | 7                    | 0                           | 7               | 14                                                                 |
+| **Perturb Seq**            | 64                   | 18                          | 24              | 106                                                                |
+| **Three Analysis (Unique Genes)** | 76                   | 25                          | 31 (4 genes overlapped in three analysis) | 132                                                                |
+
+- Number of peripheral genes (regulate 1 core gene), number of master peripheral genes (regulate > 1 core genes), and number of core genes by using GWAS nearest genes
+
+**GWAS Nearest Genes**
+
+|                          | COTA peripheral genes | COTA master peripheral genes | COTA core genes | Total number of genes explained in COTA network (peripheral + core) |
+|-------------------------:|---------------------:|----------------------------:|----------------:|--------------------------------------------------------------------:|
+| **SNP Based**            | 1                    | 6                           | 3               | 10                                                                 |
+| **Gene Based**           | 2                    | 0                           | 2               | 4                                                                  |
+| **Perturb Seq**          | 14                   | 1                           | 4               | 19                                                                 |
+| **Three Analysis (Unique Genes)** | 17                   | 7                           | 7 (2 genes overlapped in three analysis) | 31                                                                |
+
+
+- Number of peripheral genes (regulate 1 core gene), number of master peripheral genes (regulate > 1 core genes), and number of core genes by using 1MB of the GWAS loci
+
+**1Mb GWAS Significant Loci**
+
+|                          | COTA peripheral genes | COTA master peripheral genes | COTA core genes | Total number of genes explained in COTA network (peripheral + core) |
+|-------------------------:|---------------------:|----------------------------:|----------------:|--------------------------------------------------------------------:|
+| **SNP Based**            | 4                    | 6                           | 3               | 13                                                                 |
+| **Gene Based**           | 4                    | 0                           | 3               | 7                                                                  |
+| **Perturb Seq**          | 31                   | 3                           | 6               | 40                                                                 |
+| **Three Analysis (Unique Genes)** | 39                   | 9                           | 9 (2 genes overlapped in three analysis) | 57                                                                |
+
 
 ## Q&A on the Project
 
