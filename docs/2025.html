@@ -13,7 +13,7 @@
 
 <title>2025.knit</title>
 
-<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -37,8 +37,8 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -400,7 +400,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-02-19
+<strong>Last updated:</strong> 2025-05-20
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreea0a2f09389ab52a4ce58bea74122881ca79bbbcetargetblanka0a2f09a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree6cf4626e425da725ea0147d01929815b4c40e217targetblank6cf4626a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/a0a2f09389ab52a4ce58bea74122881ca79bbbce" target="_blank">a0a2f09</a>
+<a href="https://github.com/zq2209/GradPLog/tree/6cf4626e425da725ea0147d01929815b4c40e217" target="_blank">6cf4626</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreea0a2f09389ab52a4ce58bea74122881ca79bbbcetargetblanka0a2f09a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree6cf4626e425da725ea0147d01929815b4c40e217targetblank6cf4626a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/a0a2f09389ab52a4ce58bea74122881ca79bbbce" target="_blank">a0a2f09</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/6cf4626e425da725ea0147d01929815b4c40e217" target="_blank">6cf4626</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -609,6 +609,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/6cf4626e425da725ea0147d01929815b4c40e217/analysis/2025.Rmd" target="_blank">6cf4626</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-05-20
+</td>
+<td>
+update progression
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/a5cd70b230f51b2ca3664c359e6e17f485320a02/docs/2025.html" target="_blank">a5cd70b</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-02-19
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -2444,6 +2478,214 @@ SD
 </div>
 </div>
 </div>
+<div id="week-8-feb-24---mar-2" class="section level2">
+<h2>Week 8: Feb 24 - Mar 2</h2>
+<div id="annotating-the-networks" class="section level3">
+<h3>Annotating the networks</h3>
+<p>After having the networks, the following question is how confident
+about our result and how to interpret genes identified. To explore this,
+we annotate these networks as following:</p>
+<ul>
+<li><p>GWAS Significance:</p>
+<ul>
+<li><p>Nodes are colored based on GWAS p-values.</p></li>
+<li><p>Each gene is assigned the smallest p-value from nearby
+SNP.</p></li>
+<li><p>For regions with multiple genes, the smallest p-value of genes is
+used.</p></li>
+</ul></li>
+<li><p>Open Targets Genetics (OTG):</p>
+<ul>
+<li><p>Over 5000 genes are associated with CD, but many have low
+Association Scores.</p></li>
+<li><p>A threshold of 0.3 was applied, selecting 159 Open Target
+genes.</p></li>
+<li><p>Gene names are colored blue.</p></li>
+</ul></li>
+<li><p>WES Genes:</p>
+<ul>
+<li><p>Gene names are colored red.</p></li>
+<li><p>Genes present in both Open Targets and WES datasets are colored
+purple.</p></li>
+</ul></li>
+</ul>
+<p>The following are annotated network from perturb-seq data:</p>
+<p><img src="assets/network_perturb_annotated.png"
+style="width:100.0%" /></p>
+<p>Key findings:</p>
+<p>A lot of hub are not GWAS significant genes, while peripheral genes
+are more likely GWAS significant genes. An explanation for this findings
+is that core genes tend not to be common variants, having more selection
+pressure.</p>
+</div>
+</div>
+<div id="week-9-10-mar-3---mar-16" class="section level2">
+<h2>Week 9-10: Mar 3 - Mar 16</h2>
+<p>One of the goal of this project is really to interpret and explain
+the GWAS findings of IBD. A simple way to do this is to summarize how
+many GWAS significant loci are core or peripheral genes. We summarize
+COTA result as the following:</p>
+<p>COTA Genes Detected</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="13%" />
+<col width="17%" />
+<col width="10%" />
+<col width="41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="right">COTA peripheral genes</th>
+<th align="right">COTA master peripheral genes</th>
+<th align="right">COTA core genes</th>
+<th align="right">Total number of genes explained in COTA network
+(peripheral + core)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>SNP Based</strong></td>
+<td align="right">5</td>
+<td align="right">7</td>
+<td align="right">5</td>
+<td align="right">17</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Gene Based</strong></td>
+<td align="right">7</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong>Perturb Seq</strong></td>
+<td align="right">64</td>
+<td align="right">18</td>
+<td align="right">24</td>
+<td align="right">106</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Three Analysis (Unique Genes)</strong></td>
+<td align="right">76</td>
+<td align="right">25</td>
+<td align="right">31 (4 genes overlapped in three analysis)</td>
+<td align="right">132</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Number of peripheral genes (regulate 1 core gene), number of master
+peripheral genes (regulate &gt; 1 core genes), and number of core genes
+by using GWAS nearest genes</li>
+</ul>
+<p><strong>GWAS Nearest Genes</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="17%" />
+<col width="10%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="right">COTA peripheral genes</th>
+<th align="right">COTA master peripheral genes</th>
+<th align="right">COTA core genes</th>
+<th align="right">Total number of genes explained in COTA network
+(peripheral + core)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>SNP Based</strong></td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Gene Based</strong></td>
+<td align="right">2</td>
+<td align="right">0</td>
+<td align="right">2</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong>Perturb Seq</strong></td>
+<td align="right">14</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Three Analysis (Unique Genes)</strong></td>
+<td align="right">17</td>
+<td align="right">7</td>
+<td align="right">7 (2 genes overlapped in three analysis)</td>
+<td align="right">31</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Number of peripheral genes (regulate 1 core gene), number of master
+peripheral genes (regulate &gt; 1 core genes), and number of core genes
+by using 1MB of the GWAS loci</li>
+</ul>
+<p><strong>1Mb GWAS Significant Loci</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="17%" />
+<col width="10%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"></th>
+<th align="right">COTA peripheral genes</th>
+<th align="right">COTA master peripheral genes</th>
+<th align="right">COTA core genes</th>
+<th align="right">Total number of genes explained in COTA network
+(peripheral + core)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><strong>SNP Based</strong></td>
+<td align="right">4</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Gene Based</strong></td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">3</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="right"><strong>Perturb Seq</strong></td>
+<td align="right">31</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right">40</td>
+</tr>
+<tr class="even">
+<td align="right"><strong>Three Analysis (Unique Genes)</strong></td>
+<td align="right">39</td>
+<td align="right">9</td>
+<td align="right">9 (2 genes overlapped in three analysis)</td>
+<td align="right">57</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="qa-on-the-project" class="section level2">
 <h2>Q&amp;A on the Project</h2>
 <ol style="list-style-type: decimal">
@@ -2514,37 +2756,38 @@ Session information
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre><code>R version 4.2.2 (2022-10-31)
-Platform: aarch64-apple-darwin20 (64-bit)
-Running under: macOS Ventura 13.3.1
+<pre><code>R version 4.4.3 (2025-02-28)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sequoia 15.4.1
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/Chicago
+tzcode source: internal
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] kableExtra_1.3.4 knitr_1.43       workflowr_1.7.1 
+[1] kableExtra_1.4.0 knitr_1.50      
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.12       highr_0.10        compiler_4.2.2    pillar_1.10.1    
- [5] bslib_0.5.0       later_1.3.1       git2r_0.33.0      jquerylib_0.1.4  
- [9] tools_4.2.2       getPass_0.2-4     digest_0.6.31     viridisLite_0.4.2
-[13] jsonlite_1.8.8    evaluate_0.21     lifecycle_1.0.4   tibble_3.2.1     
-[17] pkgconfig_2.0.3   rlang_1.1.3       cli_3.6.2         rstudioapi_0.14  
-[21] yaml_2.3.7        xfun_0.39         fastmap_1.1.1     xml2_1.3.4       
-[25] httr_1.4.7        stringr_1.5.1     systemfonts_1.0.4 fs_1.6.2         
-[29] vctrs_0.6.5       sass_0.4.6        webshot_0.5.4     rprojroot_2.0.4  
-[33] svglite_2.1.1     glue_1.7.0        R6_2.5.1          processx_3.8.1   
-[37] rmarkdown_2.22    callr_3.7.3       magrittr_2.0.3    whisker_0.4.1    
-[41] scales_1.3.0      ps_1.7.5          promises_1.2.0.1  htmltools_0.5.5  
-[45] rvest_1.0.3       colorspace_2.1-0  httpuv_1.6.11     stringi_1.8.4    
-[49] munsell_0.5.1     cachem_1.0.8     </code></pre>
+ [1] jsonlite_2.0.0     compiler_4.4.3     promises_1.3.2     Rcpp_1.0.14       
+ [5] xml2_1.3.8         stringr_1.5.1      git2r_0.36.2       later_1.4.2       
+ [9] jquerylib_0.1.4    textshaping_1.0.1  systemfonts_1.2.3  scales_1.4.0      
+[13] yaml_2.3.10        fastmap_1.2.0      R6_2.6.1           workflowr_1.7.1   
+[17] tibble_3.2.1       rprojroot_2.0.4    svglite_2.2.1      bslib_0.9.0       
+[21] pillar_1.10.2      RColorBrewer_1.1-3 rlang_1.1.6        cachem_1.1.0      
+[25] stringi_1.8.7      httpuv_1.6.16      xfun_0.52          fs_1.6.6          
+[29] sass_0.4.10        viridisLite_0.4.2  cli_3.6.5          magrittr_2.0.3    
+[33] digest_0.6.37      rstudioapi_0.17.1  lifecycle_1.0.4    vctrs_0.6.5       
+[37] evaluate_1.0.3     glue_1.8.0         farver_2.1.2       whisker_0.4.1     
+[41] rmarkdown_2.29     tools_4.4.3        pkgconfig_2.0.3    htmltools_0.5.8.1 </code></pre>
 </div>
 </div>
 </div>
