@@ -654,7 +654,7 @@ A lot of hub are not GWAS significant genes, while peripheral genes are more lik
 
 One of the goal of this project is really to interpret and explain the GWAS findings of IBD. A simple way to do this is to summarize how many GWAS significant loci are core or peripheral genes. We summarize COTA result as the following:
 
-COTA Genes Detected
+**COTA Genes Detected**
 
 |                            | COTA peripheral genes | COTA master peripheral genes | COTA core genes | Total number of genes explained in COTA network (peripheral + core) |
 |---------------------------:|---------------------:|----------------------------:|----------------:|--------------------------------------------------------------------:|
