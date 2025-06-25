@@ -132,6 +132,9 @@ Note: Total pairs is the number of unique pairs * 2
 2. Probability of transQTL of B given cisQTL for A, and any other possible combination
 
 3. Any other PPI module
+ 
+ - [Production of Protein-Complex Components Is Stoichiometric and Lacks General Feedback Regulation in Eukaryotes](https://www.sciencedirect.com/science/article/pii/S2405471218304721): Protein complex from four species. 
+
 
 
 
