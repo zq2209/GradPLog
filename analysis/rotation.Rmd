@@ -1,0 +1,128 @@
+--
+title: 'Progress on Rotation Project'
+output:
+  workflowr::wflow_html:
+              toc: true
+              toc_depth: 4
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{css style settings, echo = FALSE}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    border-left: 5px solid #eee;
+}
+```
+
+
+## Goal
+
+- Investigate potential mechanisms that may underlie genetic variants that affect a gene's protein expression level in trans, but not its mRNA expression level. 
+
+- Curate databases that capture different mechanisms including annotated strict protein complex partners, many different methods that identify protein-protein interaction networks, known signaling pathway, and more. 
+
+- Develop approaches that may help distinguish trans-pQTLs that are driven by cell-composition effects versus intra-cellular trans-pQTL effects
+
+
+## Test whether pQTL enriched in protein pairs
+
+### Dataset
+
+- PPI 
+
+  - Bioplex: ~ 2900 pairs after overlapping with pQTL data
+
+  - Hippie: ~ 1346 pairs after overlapping
+
+  - Corum: ~ 1270 pairs after overlapping
+
+  - String: ~ 6750 pairs after overlapping
+  
+- Gene module
+
+  - DNG gene module by trans-PCO: 
+    
+    - 166 gene modules
+    
+    - 12000+ genes in total
+    
+    - over 1,000,000 gene pairs 
+
+
+- QTL summary statistics
+
+  - UKB-PPP: plasma
+  
+  - DGN: whole blood
+
+
+### Prodecure 
+
+1. For each gene/protein pair, pick up the SNP from the most significant transQTL (i.e. smallest pvalue) of gene/protein A.
+
+2. For gene/protein B of this gene pair, pick up pvalue of QTL for this SNP and B. 
+
+3. After fisrt 2 steps, there will be a pair of pvalues, then calculate the proportion that both pvalues are significant under certain pvalue threshold, i.e. the probability of there is transQTL for B given there is transQTL for A. 
+
+4. Use bootstrap to somehow mimic the distribution of the probability. For each dataset, each time select certain number of pairs and calculate probability of this dataset. From boostrap, there will be distribution of probability, able to estimate standard errors and construct confidence intervals. 
+
+
+Note: Not sure about which pvalue threshold and sample size of bootstrap, so have results for multiple pvalue thresholds and boostrap sample sizes. 
+
+
+
+### Preliminary result
+
+- Plot for probability of there is transQTL for B given there is transQTL for A with bootstrap
+
+![](assets/ppi_v1.png){width="100%"}
+
+The overall trend as expected, PPI pairs have higher probability then random pairs. And the error bar decrease as sample size of bootstrap increase. 
+
+- Table for cisQTL for B given there is transQTL for A
+
+Table: Total Number of Cis-Trans Pairs (p < 5e-8) by Dataset
+
+| Dataset | Total | trans-cis | 
+|---------|-------|-----|
+| bioplex | 5800  | 21  |
+| corum   | 2542  | 25  | 
+| hippie  | 2692  | 11  |
+| random  | 4471  | 6   |
+
+Note: Total pairs is the number of unique pairs * 2
+
+### Consideration & Disscussion
+
+1. The tissue difference may have impact on the result
+
+  - Different tissue of PPI datasets:, e.g whole blood cells for bioplex and general cells for others
+  
+  - Different tissue in pQTL and eQTL data
+  
+2. The technology difference may also have some impact 
+
+  - e.g. bioplex test for interaction instead of complex
+
+3. The difference in number of pairs
+
+
+### Next step
+
+1. Summarize the gene pair result
+
+2. Probability of transQTL of B given cisQTL for A, and any other possible combination
+
+3. Any other PPI module
+
+
+
+
+
