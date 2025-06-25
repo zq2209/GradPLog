@@ -11,7 +11,7 @@
 
 
 
-<title>Research Progress (Liu Lab)</title>
+<title>rotation.knit.md</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -232,6 +235,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -239,6 +305,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -294,8 +370,6 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><strong>Research Progress (Liu
-Lab)</strong></h1>
 
 </div>
 
@@ -328,7 +402,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -365,6 +439,90 @@ class="panel-collapse collapse">
 <p>Great! Since the R Markdown file has been committed to the Git
 repository, you know the exact version of the code that produced these
 results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20220610code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20220610)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20220610code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20220610)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
@@ -419,10 +577,11 @@ have uncommitted changes.
 <div id="versions" class="tab-pane fade">
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
-(<code>docs/index.html</code>) files. If you’ve configured a remote Git
-repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
-in the table below to view the files as they were in that past version.
+made to the R Markdown (<code>analysis/rotation.Rmd</code>) and HTML
+(<code>docs/rotation.html</code>) files. If you’ve configured a remote
+Git repository (see <code>?wflow_git_remote</code>), click on the
+hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -451,7 +610,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/zq2209/GradPLog/blob/783dfdbfcd939c5be689b5cdfd47ca9aee464d60/analysis/index.Rmd" target="_blank">783dfdb</a>
+<a href="https://github.com/zq2209/GradPLog/blob/783dfdbfcd939c5be689b5cdfd47ca9aee464d60/analysis/rotation.Rmd" target="_blank">783dfdb</a>
 </td>
 <td>
 zq2209
@@ -463,312 +622,6 @@ zq2209
 add ppi rotation project
 </td>
 </tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/d23abf48542b5934899699dca365014663a01afa/docs/index.html" target="_blank">d23abf4</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/bcff4bda3b9dfbf083b60415ab74bea271dcb5e3/analysis/index.Rmd" target="_blank">bcff4bd</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-03
-</td>
-<td>
-build sites
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/bcff4bda3b9dfbf083b60415ab74bea271dcb5e3/docs/index.html" target="_blank">bcff4bd</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-03
-</td>
-<td>
-build sites
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/ded2ce1b7f2e007c613904c6ff75933caac3c086/analysis/index.Rmd" target="_blank">ded2ce1</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-03
-</td>
-<td>
-build sites
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/dcf826923ca1f3734fff5993cc0f31e7be040666/docs/index.html" target="_blank">dcf8269</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-03
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/a5728edf25b1bb21cfbfcb83be81565581802c9f/analysis/index.Rmd" target="_blank">a5728ed</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-01
-</td>
-<td>
-update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/a5728edf25b1bb21cfbfcb83be81565581802c9f/docs/index.html" target="_blank">a5728ed</a>
-</td>
-<td>
-“John
-</td>
-<td>
-2025-02-01
-</td>
-<td>
-update
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/fc3f83748787e260835b170eeb13a8ce44e3a15a/docs/index.html" target="_blank">fc3f837</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/d429c32f8c078563ad64d7c63c96181624e8c516/analysis/index.Rmd" target="_blank">d429c32</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-11
-</td>
-<td>
-Customize website style.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/b08e6a3f721d7444369161779d443d95657f60c6/docs/index.html" target="_blank">b08e6a3</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/87639c26942e5a24d2c5872c9141f62593fa0fd0/docs/index.html" target="_blank">87639c2</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/b48a54cda0bb186b0921aae78ba5ca633da43980/docs/index.html" target="_blank">b48a54c</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/915f2aa361ba97425605c953a6e995f3c6f9e009/analysis/index.Rmd" target="_blank">915f2aa</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-wflow_publish(c(".gitignore", "README.md", "analysis/_site.yml",
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/43dad0dec5ee0dc3370813cd787cf7feb08a880a/docs/index.html" target="_blank">43dad0d</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/a7c2714ded8dd82ffa514d336a4e80ff62720cc7/analysis/index.Rmd" target="_blank">a7c2714</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-wflow_publish(c(".gitignore", "README.md", "analysis/_site.yml",
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/zq2209/GradPLog/103661cbc9d20f156216f7a41f3150671f2c4f08/docs/index.html" target="_blank">103661c</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/749b101fe5bc4b2a2157138763deba68db3a0adc/analysis/index.Rmd" target="_blank">749b101</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-wflow_publish(c(".gitignore", "README.md", "analysis/_site.yml",
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/zq2209/GradPLog/blob/5f2cee493a315d7ed1701ce69310febcd6f45fd2/analysis/index.Rmd" target="_blank">5f2cee4</a>
-</td>
-<td>
-liliw-w
-</td>
-<td>
-2022-06-10
-</td>
-<td>
-Start workflowr project.
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -776,20 +629,218 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<center>
-<img src="index_image.jpeg" style="width:100.0%" />
-</center>
-<div id="welcome" class="section level2">
-<h2>Welcome</h2>
-<p>Welcome to my research website. This website document my research
-progression.</p>
-</div>
-<div id="topics" class="section level2">
-<h2>Topics</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td>title: ‘Progress on Rotation Project’</td>
+</tr>
+<tr class="even">
+<td>output:</td>
+</tr>
+<tr class="odd">
+<td>workflowr::wflow_html:</td>
+</tr>
+<tr class="even">
+<td>toc: true</td>
+</tr>
+<tr class="odd">
+<td>toc_depth: 4</td>
+</tr>
+<tr class="even">
+<td>editor_options:</td>
+</tr>
+<tr class="odd">
+<td>chunk_output_type: console</td>
+</tr>
+</tbody>
+</table>
+<style type="text/css">
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    border-left: 5px solid #eee;
+}
+</style>
+<div id="goal" class="section level2">
+<h2>Goal</h2>
 <ul>
-<li><p>Progress in 2025. <a href="2025.html">click</a></p></li>
-<li><p>Progress in rotation. <a href="rotation.html">click</a></p></li>
+<li><p>Investigate potential mechanisms that may underlie genetic
+variants that affect a gene’s protein expression level in trans, but not
+its mRNA expression level.</p></li>
+<li><p>Curate databases that capture different mechanisms including
+annotated strict protein complex partners, many different methods that
+identify protein-protein interaction networks, known signaling pathway,
+and more.</p></li>
+<li><p>Develop approaches that may help distinguish trans-pQTLs that are
+driven by cell-composition effects versus intra-cellular trans-pQTL
+effects</p></li>
 </ul>
+</div>
+<div id="test-whether-pqtl-enriched-in-protein-pairs"
+class="section level2">
+<h2>Test whether pQTL enriched in protein pairs</h2>
+<div id="dataset" class="section level3">
+<h3>Dataset</h3>
+<ul>
+<li><p>PPI</p>
+<ul>
+<li><p>Bioplex: ~ 2900 pairs after overlapping with pQTL data</p></li>
+<li><p>Hippie: ~ 1346 pairs after overlapping</p></li>
+<li><p>Corum: ~ 1270 pairs after overlapping</p></li>
+<li><p>String: ~ 6750 pairs after overlapping</p></li>
+</ul></li>
+<li><p>Gene module</p>
+<ul>
+<li><p>DNG gene module by trans-PCO:</p>
+<ul>
+<li><p>166 gene modules</p></li>
+<li><p>12000+ genes in total</p></li>
+<li><p>over 1,000,000 gene pairs</p></li>
+</ul></li>
+</ul></li>
+<li><p>QTL summary statistics</p>
+<ul>
+<li><p>UKB-PPP: plasma</p></li>
+<li><p>DGN: whole blood</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="prodecure" class="section level3">
+<h3>Prodecure</h3>
+<ol style="list-style-type: decimal">
+<li><p>For each gene/protein pair, pick up the SNP from the most
+significant transQTL (i.e. smallest pvalue) of gene/protein A.</p></li>
+<li><p>For gene/protein B of this gene pair, pick up pvalue of QTL for
+this SNP and B.</p></li>
+<li><p>After fisrt 2 steps, there will be a pair of pvalues, then
+calculate the proportion that both pvalues are significant under certain
+pvalue threshold, i.e. the probability of there is transQTL for B given
+there is transQTL for A.</p></li>
+<li><p>Use bootstrap to somehow mimic the distribution of the
+probability. For each dataset, each time select certain number of pairs
+and calculate probability of this dataset. From boostrap, there will be
+distribution of probability, able to estimate standard errors and
+construct confidence intervals.</p></li>
+</ol>
+<p>Note: Not sure about which pvalue threshold and sample size of
+bootstrap, so have results for multiple pvalue thresholds and boostrap
+sample sizes.</p>
+</div>
+<div id="preliminary-result" class="section level3">
+<h3>Preliminary result</h3>
+<ul>
+<li>Plot for probability of there is transQTL for B given there is
+transQTL for A with bootstrap</li>
+</ul>
+<p><img src="assets/ppi_v1.png" style="width:100.0%" /></p>
+<p>The overall trend as expected, PPI pairs have higher probability then
+random pairs. And the error bar decrease as sample size of bootstrap
+increase.</p>
+<ul>
+<li>Table for cisQTL for B given there is transQTL for A</li>
+</ul>
+<table>
+<caption>Total Number of Cis-Trans Pairs (p &lt; 5e-8) by
+Dataset</caption>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Total</th>
+<th>trans-cis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>bioplex</td>
+<td>5800</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>corum</td>
+<td>2542</td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>hippie</td>
+<td>2692</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>random</td>
+<td>4471</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Total pairs is the number of unique pairs * 2</p>
+</div>
+<div id="consideration-disscussion" class="section level3">
+<h3>Consideration &amp; Disscussion</h3>
+<ol style="list-style-type: decimal">
+<li>The tissue difference may have impact on the result</li>
+</ol>
+<ul>
+<li><p>Different tissue of PPI datasets:, e.g whole blood cells for
+bioplex and general cells for others</p></li>
+<li><p>Different tissue in pQTL and eQTL data</p></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>The technology difference may also have some impact</li>
+</ol>
+<ul>
+<li>e.g. bioplex test for interaction instead of complex</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>The difference in number of pairs</li>
+</ol>
+</div>
+<div id="next-step" class="section level3">
+<h3>Next step</h3>
+<ol style="list-style-type: decimal">
+<li><p>Summarize the gene pair result</p></li>
+<li><p>Probability of transQTL of B given cisQTL for A, and any other
+possible combination</p></li>
+<li><p>Any other PPI module</p></li>
+</ol>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre><code>R version 4.4.3 (2025-02-28)
+Platform: aarch64-apple-darwin20
+Running under: macOS Sequoia 15.5
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/Chicago
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] vctrs_0.6.5       cli_3.6.5         knitr_1.50        rlang_1.1.6      
+ [5] xfun_0.52         stringi_1.8.7     promises_1.3.3    jsonlite_2.0.0   
+ [9] workflowr_1.7.1   glue_1.8.0        rprojroot_2.0.4   git2r_0.36.2     
+[13] htmltools_0.5.8.1 httpuv_1.6.16     sass_0.4.10       rmarkdown_2.29   
+[17] evaluate_1.0.3    jquerylib_0.1.4   tibble_3.2.1      fastmap_1.2.0    
+[21] yaml_2.3.10       lifecycle_1.0.4   whisker_0.4.1     stringr_1.5.1    
+[25] compiler_4.4.3    fs_1.6.6          Rcpp_1.0.14       pkgconfig_2.0.3  
+[29] rstudioapi_0.17.1 later_1.4.2       digest_0.6.37     R6_2.6.1         
+[33] pillar_1.10.2     magrittr_2.0.3    bslib_0.9.0       tools_4.4.3      
+[37] cachem_1.1.0     </code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -813,6 +864,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -845,6 +898,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

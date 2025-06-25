@@ -1,5 +1,5 @@
 --
-title: 'Progress on Rotation Project'
+title: ''
 output:
   workflowr::wflow_html:
               toc: true
@@ -91,11 +91,11 @@ The overall trend as expected, PPI pairs have higher probability then random pai
 Table: Total Number of Cis-Trans Pairs (p < 5e-8) by Dataset
 
 | Dataset | Total | trans-cis | 
-|---------|-------|-----|
-| bioplex | 5800  | 21  |
-| corum   | 2542  | 25  | 
-| hippie  | 2692  | 11  |
-| random  | 4471  | 6   |
+|---------|-------|-----------|
+| bioplex | 5800  |    21     |
+| corum   | 2542  |    25     | 
+| hippie  | 2692  |    11     |
+| random  | 4471  |    6      |
 
 Note: Total pairs is the number of unique pairs * 2
 
