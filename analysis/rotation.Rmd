@@ -97,13 +97,15 @@ library(kableExtra)
 
 df <- data.frame(
   Dataset = c("bioplex", "corum", "hippie", "random"),
-  total = c(5800, 2542, 2692, 4471),
+  Total = c(5800, 2542, 2692, 4471),
   `trans-cis` = c(21, 25, 11, 6)
 )
 
 kable(df, align = "c", caption = "Table: Total Number of Cis-Trans Pairs (p < 5e-8) by Dataset") %>%
-  kable_styling(full_width = F, position = "center")
-
+  kable_styling(full_width = F, position = "center") %>%
+  column_spec(1, width = "5cm") %>%
+  column_spec(2, width = "4cm") %>%
+  column_spec(3, width = "4cm")
 ```
 
 Note: Total pairs is the number of unique pairs * 2
