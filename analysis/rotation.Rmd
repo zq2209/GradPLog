@@ -44,7 +44,7 @@ blockquote {
 
   - Corum: ~ 1270 pairs after overlapping
 
-  - String: ~ 6750 pairs after overlapping
+  - String: ~ 3391 pairs after overlapping
   
 - Gene module
 
@@ -83,7 +83,7 @@ Note: Not sure about which pvalue threshold and sample size of bootstrap, so hav
 
 - Plot for probability of there is transQTL for B given there is transQTL for A with bootstrap
 
-![](assets/ppi_v1.png){width="100%"}
+![](assets/ppi_prob_bootstrap.png){width="100%"}
 
 The overall trend as expected, PPI pairs have higher probability then random pairs. And the error bar decrease as sample size of bootstrap increase. 
 
@@ -96,9 +96,9 @@ library(knitr)
 library(kableExtra)
 
 df <- data.frame(
-  Dataset = c("bioplex", "corum", "hippie", "random"),
-  Total = c(5800, 2542, 2692, 4471),
-  `trans-cis` = c(21, 25, 11, 6)
+  Dataset = c("bioplex", "corum", "hippie", "string", "random"),
+  Total = c(5800, 2542, 2692, 6698, 4471),
+  `trans-cis` = c(21, 25, 11, 63, 6)
 )
 
 kable(df, align = "c", caption = "Table: Total Number of Cis-Trans Pairs") %>%
