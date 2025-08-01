@@ -31,6 +31,7 @@ blockquote {
 
 - Develop approaches that may help distinguish trans-pQTLs that are driven by cell-composition effects versus intra-cellular trans-pQTL effects
 
+## Jun 26 Update
 
 ## Test whether pQTL enriched in protein pairs
 
@@ -125,13 +126,137 @@ Note: Total pairs is the number of unique pairs * 2
 3. The difference in number of pairs
 
 
+## July 31 - Update
+
+- Plot for probability of there is transQTL for B given there is 
+  transQTL for A with bootstrap - Updated
+
+![](assets/ppi_prob_bootstrap-updated.png){width="100%"}
+
+
+### Exclude SNPs colocalized with cell type composition
+
+- Plot for probability of there is transQTL for B given there is 
+  transQTL for A with bootstrap 
+  
+  - Exclude SNPs colocalized with cell type composition
+
+![](assets/ppi_prob_bootstrap_exclude_cell_type_coloc.png){width="100%"}
+
+The average proportion are relatively lower than before. But the trend remain the same.
+
+
+### Test how many unsignificant snp for protein A is significant for protein B
+
+- Plot for probability of there is transQTL for B given there is 
+  non-transQTL for A with bootstrap 
+  
+- Same procedure as before but first extract snp that not significant for protein A
+
+![](assets/ppi_prob_bootstrap_non_sig.png){width="100%"}
+
+From the plot, the proportion of transQTL for B given non-transQTL for A is close to corresponding threshold. 
+
+### Analysis on top 2 significant snps
+
+This is to check whether most significant SNP for A is less than the cutoff when second significant SNP for A is less than the cutoff
+
+1. For each pair, choose the top 2 significant SNP for A
+
+
+2. check whether the SNP 2 (second significant snp) is less than cutoff for B
+
+
+3. Check whether SNP 1 is less than cutoff when SNP 2 is less than cutoff or not
+
+
+```{r}
+library(knitr)
+library(kableExtra)
+library(dplyr)
+
+# Define the tables
+# Define all five matrices
+bioplex <- matrix(c(1507, 192, 225, 3874), nrow = 2, byrow = TRUE,
+                  dimnames = list(c("snp2 significant", "snp2 not significant"),
+                                  c("snp1 significant", "snp1 not significant")))
+
+corum <- matrix(c(813, 116, 126, 1480), nrow = 2, byrow = TRUE,
+                dimnames = list(c("snp2 significant", "snp2 not significant"),
+                                c("snp1 significant", "snp1 not significant")))
+
+hippie <- matrix(c(853, 81, 118, 1640), nrow = 2, byrow = TRUE,
+                 dimnames = list(c("snp2 significant", "snp2 not significant"),
+                                 c("snp1 significant", "snp1 not significant")))
+
+string <- matrix(c(2160, 217, 324, 4060), nrow = 2, byrow = TRUE,
+                 dimnames = list(c("snp2 significant", "snp2 not significant"),
+                                 c("snp1 significant", "snp1 not significant")))
+
+random <- matrix(c(907, 185, 212, 3165), nrow = 2, byrow = TRUE,
+                 dimnames = list(c("snp2 significant", "snp2 not significant"),
+                                 c("snp1 significant", "snp1 not significant")))
+
+format_matrix_with_proportion <- function(mat) {
+  row_totals <- rowSums(mat)
+  proportions <- sweep(mat, 1, row_totals, FUN = "/")
+  
+  # Format each cell as "count (proportion)"
+  formatted <- matrix(
+    paste0(mat, " (", sprintf("%.2f", proportions), ")"),
+    nrow = nrow(mat),
+    dimnames = dimnames(mat)
+  )
+  
+  # Add total column with count only
+  total_col <- paste0(row_totals)
+  
+  cbind(formatted, Total = total_col)
+}
+
+bioplex_with_props <- format_matrix_with_proportion(bioplex)
+corum_with_props <- format_matrix_with_proportion(corum)
+hippie_with_props <- format_matrix_with_proportion(hippie)
+string_with_props <- format_matrix_with_proportion(string)
+random_with_props <- format_matrix_with_proportion(random)
+
+# Create and style each table
+kable(bioplex_with_props, caption = "bioplex 0.05") %>%
+  kable_styling(full_width = FALSE, position = "center")
+
+kable(corum_with_props, caption = "corum 0.05") %>%
+  kable_styling(full_width = FALSE, position = "center")
+
+kable(hippie_with_props, caption = "hippie 0.05") %>%
+  kable_styling(full_width = FALSE, position = "center")
+
+kable(string_with_props, caption = "string 0.05") %>%
+  kable_styling(full_width = FALSE, position = "center")
+
+kable(random_with_props, caption = "random 0.05") %>%
+  kable_styling(full_width = FALSE, position = "center")
+
+```
+
+Based on the result, simple chi-square test is performed. Chi-square tests are significant, which means that whether SNP1 is significant is associated with whether SNP2 is significant or not. 
+
+### Analysis on gene pairs
+
+- Plot for probability of there is transQTL for B given there is 
+  transQTL for A with bootstrap 
+  
+- Same procedure as before
+
+![](assets/ppi_prob_bootstrap_with_dgn.png){width="100%"}
+
+
+
 ### Next step
 
-1. Summarize the gene pair result
+1. Same thing in eQTL and CSF pQTL
 
-2. Probability of transQTL of B given cisQTL for A, and any other possible combination
 
-3. Any other PPI module
+2. Any other PPI module
  
  - [Production of Protein-Complex Components Is Stoichiometric and Lacks General Feedback Regulation in Eukaryotes](https://www.sciencedirect.com/science/article/pii/S2405471218304721): Protein complex from four species. 
 
