@@ -170,7 +170,7 @@ This is to check whether most significant SNP for A is less than the cutoff when
 3. Check whether SNP 1 is less than cutoff when SNP 2 is less than cutoff or not
 
 
-```{r}
+```{r, message=FALSE}
 library(knitr)
 library(kableExtra)
 library(dplyr)
