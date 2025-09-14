@@ -400,7 +400,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-07-31
+<strong>Last updated:</strong> 2025-09-14
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree01ec7effd2c0de00c66374f0ca7d3576380a7c82targetblank01ec7efa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreec35de8e20b04d0859e39b2c0e469ddb3ca7eb475targetblankc35de8ea">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/01ec7effd2c0de00c66374f0ca7d3576380a7c82" target="_blank">01ec7ef</a>
+<a href="https://github.com/zq2209/GradPLog/tree/c35de8e20b04d0859e39b2c0e469ddb3ca7eb475" target="_blank">c35de8e</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree01ec7effd2c0de00c66374f0ca7d3576380a7c82targetblank01ec7efa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreec35de8e20b04d0859e39b2c0e469ddb3ca7eb475targetblankc35de8ea"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/01ec7effd2c0de00c66374f0ca7d3576380a7c82" target="_blank">01ec7ef</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/c35de8e20b04d0859e39b2c0e469ddb3ca7eb475" target="_blank">c35de8e</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -610,6 +610,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/c35de8e20b04d0859e39b2c0e469ddb3ca7eb475/analysis/rotation.Rmd" target="_blank">c35de8e</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-09-14
+</td>
+<td>
+update summary
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/390fc196f46963a3a4c44344ab273f3e2acff82e/docs/rotation.html" target="_blank">390fc19</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-07-31
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1423,6 +1457,45 @@ transQTL for A with bootstrap</p></li>
 </ul>
 <p><img src="assets/ppi_prob_bootstrap_with_dgn.png"
 style="width:100.0%" /></p>
+<ul>
+<li>Do the same thing for everything on DGN eQTL data</li>
+</ul>
+<p><img src="assets/ppi_prob_eQTL.png" style="width:100.0%" /></p>
+</div>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<ul>
+<li><p>Trans-pQTL signals are enriched among protein pairs that
+physically interact or co-participate in complexes/pathways, compared to
+random gene pairs. This indicates that trans-pQTL signals are more
+likely to co-occur in pairs of proteins that are physically or
+functionally connected compared to random pairs.</p></li>
+<li><p>When SNPs colocalized with cell-type composition were excluded,
+the overall enrichment signal decreased but did not disappear. This
+suggests that while some trans associations are indeed driven by
+differences in cell composition across individuals, a substantial
+fraction likely reflects true regulatory mechanisms.</p></li>
+<li><p>When examining SNPs that were not significant for protein A but
+were tested for association with its partner protein B, the probability
+of detecting a trans-QTL for B was roughly equal to the nominal p-value
+threshold. It suggests that the earlier enrichment is specific to SNPs
+with true signals in one partner protein, not an artifact of random
+noise.</p></li>
+<li><p>When the analysis was replicated in whole blood eQTL data (DGN),
+the enrichment of trans-associations was higher for gene pairs from
+expression modules than for protein pairs, with the exception of Corum
+protein complexes, which remained highly enriched.</p>
+<ul>
+<li><p>Gene modules often reflect co-regulated transcriptional programs,
+such as pathways, signaling cascades, or co-expression driven by shared
+transcription factors.</p></li>
+<li><p>In an eQTL dataset like DGN, trans signals are more likely to
+propagate through these transcriptional networks, so enrichment appears
+stronger at the mRNA level.</p></li>
+<li><p>When p-value threshold are more strict, this pattern
+mitigate.</p></li>
+</ul></li>
+</ul>
 </div>
 <div id="next-step" class="section level3">
 <h3>Next step</h3>
@@ -1447,7 +1520,7 @@ Session information
 <div id="workflowr-sessioninfo" class="collapse">
 <pre><code>R version 4.4.3 (2025-02-28)
 Platform: aarch64-apple-darwin20
-Running under: macOS Sequoia 15.4.1
+Running under: macOS Sequoia 15.6
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
