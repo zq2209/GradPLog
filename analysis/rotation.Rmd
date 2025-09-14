@@ -33,7 +33,7 @@ blockquote {
 
 ## Jun 26 Update
 
-## Test whether pQTL enriched in protein pairs
+### Test whether pQTL enriched in protein pairs
 
 ### Dataset
 
@@ -239,6 +239,9 @@ kable(random_with_props, caption = "random 0.05") %>%
 ```
 
 Based on the result, simple chi-square test is performed. Chi-square tests are significant, which means that whether SNP1 is significant is associated with whether SNP2 is significant or not. 
+
+
+## August - Update
 
 ### Analysis on gene pairs
 
