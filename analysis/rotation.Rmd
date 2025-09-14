@@ -249,6 +249,27 @@ Based on the result, simple chi-square test is performed. Chi-square tests are s
 
 ![](assets/ppi_prob_bootstrap_with_dgn.png){width="100%"}
 
+- Do the same thing for everything on DGN eQTL data
+
+![](assets/ppi_prob_eQTL.png){width="100%"}
+
+### Summary
+
+- Trans-pQTL signals are enriched among protein pairs that physically interact or co-participate in complexes/pathways, compared to random gene pairs. This indicates that trans-pQTL signals are more likely to co-occur in pairs of proteins that are physically or functionally connected compared to random pairs.
+
+- When SNPs colocalized with cell-type composition were excluded, the overall enrichment signal decreased but did not disappear. This suggests that while some trans associations are indeed driven by differences in cell composition across individuals, a substantial fraction likely reflects true regulatory mechanisms.
+
+- When examining SNPs that were not significant for protein A but were tested for association with its partner protein B, the probability of detecting a trans-QTL for B was roughly equal to the nominal p-value threshold. It suggests that the earlier enrichment is specific to SNPs with true signals in one partner protein, not an artifact of random noise.
+
+- When the analysis was replicated in whole blood eQTL data (DGN), the enrichment of trans-associations was higher for gene pairs from expression modules than for protein pairs, with the exception of Corum protein complexes, which remained highly enriched.
+  
+  - Gene modules often reflect co-regulated transcriptional programs, such as pathways, signaling cascades, or co-expression driven by shared transcription factors.
+
+  - In an eQTL dataset like DGN, trans signals are more likely to propagate through these transcriptional networks, so enrichment appears stronger at the mRNA level.
+  
+  - When p-value threshold are more strict, this pattern mitigate. 
+
+
 
 
 ### Next step
