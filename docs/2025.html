@@ -400,7 +400,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-05-20
+<strong>Last updated:</strong> 2025-09-24
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree18e165c01428f5f0c81b7489a9ae2bbafffd96aatargetblank18e165ca">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree7a73d1a9faf8ad7282123e3c330932726ae709b3targetblank7a73d1aa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/18e165c01428f5f0c81b7489a9ae2bbafffd96aa" target="_blank">18e165c</a>
+<a href="https://github.com/zq2209/GradPLog/tree/7a73d1a9faf8ad7282123e3c330932726ae709b3" target="_blank">7a73d1a</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree18e165c01428f5f0c81b7489a9ae2bbafffd96aatargetblank18e165ca"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree7a73d1a9faf8ad7282123e3c330932726ae709b3targetblank7a73d1aa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/18e165c01428f5f0c81b7489a9ae2bbafffd96aa" target="_blank">18e165c</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/7a73d1a9faf8ad7282123e3c330932726ae709b3" target="_blank">7a73d1a</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -564,8 +564,7 @@ were generated:
 </p>
 <pre><code>
 Ignored files:
-    Ignored:    .DS_Store
-    Ignored:    .Rproj.user/
+    Ignored:    analysis/.Rhistory
 
 </code></pre>
 <p>
@@ -609,6 +608,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/7a73d1a9faf8ad7282123e3c330932726ae709b3/analysis/2025.Rmd" target="_blank">7a73d1a</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-09-24
+</td>
+<td>
+add k562 relavence analysis
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/ad95a9e2b35f0b0db1bbef09161a730b9ea4510c/docs/2025.html" target="_blank">ad95a9e</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-05-20
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -2720,6 +2753,54 @@ by using 1MB of the GWAS loci</li>
 </tbody>
 </table>
 </div>
+<div id="sept-analysis-on-relevance-of-k562-to-ibd"
+class="section level2">
+<h2>Sept: Analysis on relevance of K562 to IBD</h2>
+<p>One of the issue of K562 perturb sep data is how relevant it is to
+IBD since K562 are red cell blood cell line. Couple of analysis are done
+to assess the relavence of K562 on IBD.</p>
+<div id="cell-type-annotation-of-k562-data" class="section level4">
+<h4>Cell type annotation of K562 data</h4>
+<p>One way is to annotate each cell in K562 data. The UMAP of K562
+expression data looks like the following:</p>
+<p><img src="assets/k562_expr_umap.png" style="width:100.0%" /></p>
+<p>From the UMAP, it seems all expression are clustered together. There
+is no obvious clusters from UMAP, this may suggest K562 cells are more
+likely to be genetically identical.</p>
+<p>To be more accurate on cell type annotation, we use scmap (R package)
+to annotate K562 data based on a reference data (<a
+href="https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1">1k1k</a>),
+which is a single cell data for autoimmune disease. The overall
+procedure of <strong><em>scmapCell</em></strong> based on comparing
+similarities (i.e. difference of experession of each cell to mean
+expression of each subclusters) of projection cells to subclusters
+analyzed from reference data.</p>
+<ul>
+<li>In progress: require a lot memory and time.</li>
+</ul>
+</div>
+<div id="p-value-trend-comparison-of-k562-data" class="section level4">
+<h4>P-value trend comparison of K562 data</h4>
+<p>Another analysis is to compare the pvalue from K562 perturb seq
+analysis to eQTL (whole blood) data and Jurkat T perturb seq data. This
+is to check whether trans pvalue have similar trend.</p>
+<ul>
+<li>K562 vs. DGN (whole blood eQTL)</li>
+</ul>
+<p><img src="assets/dgn_k562_pvalue.png" style="width:100.0%" /></p>
+<ul>
+<li>K562 vs. Jurkat T (human T-lymphocyte cell line derived from T-cell
+leukemia)</li>
+</ul>
+<p><img src="assets/jurkat_k562_pvalue.png" style="width:100.0%" /></p>
+<p>Jurkat T (human T-lymphocyte cell line derived from T-cell leukemia)
+might be more relavent to IBD.</p>
+<p>Compared to DGN data, there are more pvalues lines in the dotted
+line, that pvalue for two datasets are the same. However the range of
+pvalue are quite different for Jurkat and K562, which might due to
+sample size.</p>
+</div>
+</div>
 <div id="qa-on-the-project" class="section level2">
 <h2>Q&amp;A on the Project</h2>
 <ol style="list-style-type: decimal">
@@ -2792,7 +2873,7 @@ Session information
 <div id="workflowr-sessioninfo" class="collapse">
 <pre><code>R version 4.4.3 (2025-02-28)
 Platform: aarch64-apple-darwin20
-Running under: macOS Sequoia 15.4.1
+Running under: macOS Sequoia 15.5
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
@@ -2811,7 +2892,7 @@ other attached packages:
 [1] kableExtra_1.4.0 knitr_1.50      
 
 loaded via a namespace (and not attached):
- [1] jsonlite_2.0.0     compiler_4.4.3     promises_1.3.2     Rcpp_1.0.14       
+ [1] jsonlite_2.0.0     compiler_4.4.3     promises_1.3.3     Rcpp_1.0.14       
  [5] xml2_1.3.8         stringr_1.5.1      git2r_0.36.2       later_1.4.2       
  [9] jquerylib_0.1.4    textshaping_1.0.1  systemfonts_1.2.3  scales_1.4.0      
 [13] yaml_2.3.10        fastmap_1.2.0      R6_2.6.1           workflowr_1.7.1   
