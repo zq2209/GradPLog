@@ -687,6 +687,42 @@ One of the goal of this project is really to interpret and explain the GWAS find
 | **Three Analysis (Unique Genes)** | 39                   | 9                           | 9 (2 genes overlapped in three analysis) | 57                                                                |
 
 
+## Sept: Analysis on relevance of K562 to IBD
+
+One of the issue of K562 perturb sep data is how relevant it is to IBD since K562 are red cell blood cell line. Couple of analysis are done to assess the relavence of K562 on IBD. 
+
+#### Cell type annotation of K562 data
+
+One way is to annotate each cell in K562 data. The UMAP of K562 expression data looks like the following:
+
+
+![](assets/k562_expr_umap.png){width="100%"}
+
+From the UMAP, it seems all expression are clustered together. There is no obvious clusters from UMAP, this may suggest K562 cells are more likely to be genetically identical. 
+
+To be more accurate on cell type annotation, we use scmap (R package) to annotate K562 data based on a reference data ([1k1k](https://cellxgene.cziscience.com/collections/dde06e0f-ab3b-46be-96a2-a8082383c4a1)), which is a single cell data for autoimmune disease. The overall procedure of ***scmapCell*** based on comparing similarities (i.e. difference of experession of each cell to mean expression of each subclusters) of projection cells to subclusters analyzed from reference data. 
+
+- In progress: require a lot memory and time.
+
+#### P-value trend comparison of K562 data
+
+Another analysis is to compare the pvalue from K562 perturb seq analysis to eQTL (whole blood) data and Jurkat T perturb seq data. This is to check whether trans pvalue have similar trend. 
+
+- K562 vs. DGN (whole blood eQTL)
+
+![](assets/dgn_k562_pvalue.png){width="100%"}
+
+
+- K562 vs. Jurkat T (human T-lymphocyte cell line derived from T-cell leukemia)
+
+![](assets/jurkat_k562_pvalue.png){width="100%"}
+
+Jurkat T (human T-lymphocyte cell line derived from T-cell leukemia) might be more relavent to IBD.          
+
+Compared to DGN data, there are more pvalues lines in the dotted line, that pvalue for two datasets are the same. However the range of pvalue are quite different for Jurkat and K562, which might due to sample size. 
+
+
+
 ## Q&A on the Project
 
 1. Why just burden test
