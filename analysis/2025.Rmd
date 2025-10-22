@@ -750,6 +750,15 @@ Visulization of results
 
 ![](assets/nadig_sceptre_hist_pval.png){width="100%"}
 
+- Number of pvalue under threshold
+
+| threshold  | count     | proportion |
+|------------|----------:|-----------:|
+| 0.05       | 2,769,547 | 0.155     |
+| 0.01       | 1,434,103 | 0.0804    |
+| 0.001      |   729,389 | 0.0409    |
+| 0.0001     |   444,594 | 0.0249    |
+| 0.00001    |   299,523 | 0.0168    |
 
 
 ## Q&A on the Project
