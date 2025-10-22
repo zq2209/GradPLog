@@ -722,6 +722,35 @@ Jurkat T (human T-lymphocyte cell line derived from T-cell leukemia) might be mo
 Compared to DGN data, there are more pvalues lines in the dotted line, that pvalue for two datasets are the same. However the range of pvalue are quite different for Jurkat and K562, which might due to sample size. 
 
 
+The trend of pvalue in Jurkat and K562 are different. 
+
+## Oct: Analysis on other Perturb-seq data
+
+Nadig Jurkat T cell:
+
+- 260487 cells
+- 8588 target genes, essential genes
+- 2267 guides
+
+
+QC steps: 
+
+- Remove cells without sgRNA
+- Keep sgRNA carried by more than 20 cells
+- Remove cells with mito percent > 20
+- Remove chrX/Y, chrM
+
+Visulization of results
+
+- Negative Control of pvalue
+
+![](assets/nadig_sceptre_negative_control.png){width="100%"}
+
+- Histogram of pvalue 
+
+![](assets/nadig_sceptre_hist_pval.png){width="100%"}
+
+
 
 ## Q&A on the Project
 
