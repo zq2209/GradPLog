@@ -809,18 +809,19 @@ The range for cross mappability is larger than 0. And the summary for cross mapp
 ![](assets/box_plot_cross_mappability.png){width="100%"}
 
 | Percentile | Cross Mappability |
-| ---------- | -------- |
-| 0%         | 1        |
-| 10%        | 2        |
-| 20%        | 4        |
-| 30%        | 7        |
-| 40%        | 10       |
-| 50%        | 14       |
-| 60%        | 19       |
-| 70%        | 26       |
-| 80%        | 36       |
-| 90%        | 58       |
-| 100%       | 16921    |
+|:-----------:|:----------------:|
+| 0%          | 1                |
+| 10%         | 2                |
+| 20%         | 4                |
+| 30%         | 7                |
+| 40%         | 10               |
+| 50%         | 14               |
+| 60%         | 19               |
+| 70%         | 26               |
+| 80%         | 36               |
+| 90%         | 58               |
+| 100%        | 16921            |
+
 
 
 
@@ -833,18 +834,19 @@ Most of the cross-mappability is less than 30. It is heavy tail, a lot of outlie
 ![](assets/box_plot_symmetric_cross_mappability.png){width="100%"}
 
 | Percentile | Symmetric Cross Mappability |
-| ---------- | -------- |
-| 0%         | 0.5      |
-| 10%        | 1.0      |
-| 20%        | 2.5      |
-| 30%        | 4.0      |
-| 40%        | 6.0      |
-| 50%        | 8.0      |
-| 60%        | 11.5     |
-| 70%        | 16.0     |
-| 80%        | 23.0     |
-| 90%        | 38.5     |
-| 100%       | 15660.5  |
+|:-----------:|:---------------------------:|
+| 0%          | 0.5                         |
+| 10%         | 1.0                         |
+| 20%         | 2.5                         |
+| 30%         | 4.0                         |
+| 40%         | 6.0                         |
+| 50%         | 8.0                         |
+| 60%         | 11.5                        |
+| 70%         | 16.0                        |
+| 80%         | 23.0                        |
+| 90%         | 38.5                        |
+| 100%        | 15660.5                     |
+
 
 Similarly, most of the cross-mappability is less than 30. It is heavy tail, a lot of outliers. 
 
