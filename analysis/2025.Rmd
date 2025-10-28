@@ -726,6 +726,8 @@ The trend of pvalue in Jurkat and K562 are different.
 
 ## Oct: Analysis on other Perturb-seq data
 
+### Nadig Jurkat T cell perturb seq
+
 Nadig Jurkat T cell:
 
 - 260487 cells
@@ -746,6 +748,11 @@ Visulization of results
 
 ![](assets/nadig_sceptre_negative_control.png){width="100%"}
 
+
+- QQ-Plot of pvalue
+
+![](assets/qqplot_nadig_jurkat_essential_genes.png){width="100%"}
+
 - Histogram of pvalue 
 
 ![](assets/nadig_sceptre_hist_pval.png){width="100%"}
@@ -759,6 +766,94 @@ Visulization of results
 | 0.001      |   729,389 | 0.0409    |
 | 0.0001     |   444,594 | 0.0249    |
 | 0.00001    |   299,523 | 0.0168    |
+
+
+### Dandelion on Nadig Jurkat T perturb seq
+
+Fisrt, check the overlap of burdent test genes and response genes from perturb seq
+
+![](assets/burden_test_perturb_target_overlap.png){width="100%"}
+
+Then, performing Dandelion on trans effect between genes by using Sceptre
+
+- Peripheral genes overlapped with GWAS nearest genes as candidate peripheral genes
+
+![](assets/network_annotated_gwas_overlap_jurkat_essential_genes.pdf){width="100%"}
+  - **Disease Proximal Genes (DPGs)**: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2
+  - ATG4C, and DNMT3A are burdent test significant genes
+  - LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by multiple peripheral genes
+
+
+- All peripheral genes as candidate peripheral genes
+
+![](assets/network_annotated_all_jurkat_essential_genes.pdf){width="100%"}
+
+
+  - **Disease Proximal Genes (DPGs)**: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2, GNAI3, ING1
+  - ATG4C, and DNMT3A are burdent test significant genes
+  - LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by multiple peripheral genes
+  
+  
+### Cross-mappability analysis
+
+[Cross Mappability](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305209/) for gene A to gene B (crossmap(A,B), defined as the number of gene A's k-mers (75-mers from exons and 36-mers from UTRs) whose alignment start within exonic or untranslated regions of gene B. Only genes with mappability < 1 (not NA) appear in cross mapping files. In other words, it is the count of how many k-mers from A map to B. 
+
+Because crossmap(A, B) $\ne$ crossmap(B, A) (A may have longer exons or more repetitive sequence), a symmetric version is defined $\frac{\text{crossmap(A,B)} + \text{crossmap(B,A)}}{2}$.
+
+The range for cross mappability is larger than 0. And the summary for cross mappability as the following
+
+- Distribution of cross mappability
+
+![](assets/hist_cross_mappability.png){width="100%"}
+
+![](assets/box_plot_cross_mappability.png){width="100%"}
+
+| Percentile | Cross Mappability |
+| ---------- | -------- |
+| 0%         | 1        |
+| 10%        | 2        |
+| 20%        | 4        |
+| 30%        | 7        |
+| 40%        | 10       |
+| 50%        | 14       |
+| 60%        | 19       |
+| 70%        | 26       |
+| 80%        | 36       |
+| 90%        | 58       |
+| 100%       | 16921    |
+
+
+
+Most of the cross-mappability is less than 30. It is heavy tail, a lot of outliers. 
+
+- Distribution of symmetric cross mappability
+
+![](assets/hist_symmetric_cross_mappability.png){width="100%"}
+
+![](assets/box_plot_symmetric_cross_mappability.png){width="100%"}
+
+| Percentile | Symmetric Cross Mappability |
+| ---------- | -------- |
+| 0%         | 0.5      |
+| 10%        | 1.0      |
+| 20%        | 2.5      |
+| 30%        | 4.0      |
+| 40%        | 6.0      |
+| 50%        | 8.0      |
+| 60%        | 11.5     |
+| 70%        | 16.0     |
+| 80%        | 23.0     |
+| 90%        | 38.5     |
+| 100%       | 15660.5  |
+
+Similarly, most of the cross-mappability is less than 30. It is heavy tail, a lot of outliers. 
+
+
+- Dicussion: how to set threshold to define high cross mappability
+
+  - Normalization: require length of gene A ?
+  - By distribution ?
+
 
 
 ## Q&A on the Project
