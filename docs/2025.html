@@ -400,7 +400,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-10-22
+<strong>Last updated:</strong> 2025-10-28
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree933b6ae8c37e890aeffe2fb9f4646eb3926fb199targetblank933b6aea">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree2e5010c08cee1f2c4222b875c355b890ced7e6d1targetblank2e5010ca">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/933b6ae8c37e890aeffe2fb9f4646eb3926fb199" target="_blank">933b6ae</a>
+<a href="https://github.com/zq2209/GradPLog/tree/2e5010c08cee1f2c4222b875c355b890ced7e6d1" target="_blank">2e5010c</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree933b6ae8c37e890aeffe2fb9f4646eb3926fb199targetblank933b6aea"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree2e5010c08cee1f2c4222b875c355b890ced7e6d1targetblank2e5010ca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/933b6ae8c37e890aeffe2fb9f4646eb3926fb199" target="_blank">933b6ae</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/2e5010c08cee1f2c4222b875c355b890ced7e6d1" target="_blank">2e5010c</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -565,7 +565,7 @@ were generated:
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
-    Ignored:    .Rproj.user/
+    Ignored:    analysis/.Rhistory
 
 </code></pre>
 <p>
@@ -609,6 +609,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/2e5010c08cee1f2c4222b875c355b890ced7e6d1/analysis/2025.Rmd" target="_blank">2e5010c</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-10-28
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/b68a6ce4584ff9ef8016c643675a0c453106ab7b/docs/2025.html" target="_blank">b68a6ce</a>
+</td>
+<td>
+“John
+</td>
+<td>
+2025-10-22
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -2873,6 +2907,8 @@ sample size.</p>
 </div>
 <div id="oct-analysis-on-other-perturb-seq-data" class="section level2">
 <h2>Oct: Analysis on other Perturb-seq data</h2>
+<div id="nadig-jurkat-t-cell-perturb-seq" class="section level3">
+<h3>Nadig Jurkat T cell perturb seq</h3>
 <p>Nadig Jurkat T cell:</p>
 <ul>
 <li>260487 cells</li>
@@ -2891,6 +2927,11 @@ sample size.</p>
 <li>Negative Control of pvalue</li>
 </ul>
 <p><img src="assets/nadig_sceptre_negative_control.png"
+style="width:100.0%" /></p>
+<ul>
+<li>QQ-Plot of pvalue</li>
+</ul>
+<p><img src="assets/qqplot_nadig_jurkat_essential_genes.png"
 style="width:100.0%" /></p>
 <ul>
 <li>Histogram of pvalue</li>
@@ -2936,6 +2977,191 @@ style="width:100.0%" /></p>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="dandelion-on-nadig-jurkat-t-perturb-seq"
+class="section level3">
+<h3>Dandelion on Nadig Jurkat T perturb seq</h3>
+<p>Fisrt, check the overlap of burdent test genes and response genes
+from perturb seq</p>
+<p><img src="assets/burden_test_perturb_target_overlap.png"
+style="width:100.0%" /></p>
+<p>Then, performing Dandelion on trans effect between genes by using
+Sceptre</p>
+<ul>
+<li>Peripheral genes overlapped with GWAS nearest genes as candidate
+peripheral genes</li>
+</ul>
+<p><embed
+src="assets/network_annotated_gwas_overlap_jurkat_essential_genes.pdf"
+style="width:100.0%" /> - <strong>Disease Proximal Genes
+(DPGs)</strong>: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36,
+LCP2 - ATG4C, and DNMT3A are burdent test significant genes - LCP2,
+ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by
+multiple peripheral genes</p>
+<ul>
+<li>All peripheral genes as candidate peripheral genes</li>
+</ul>
+<p><embed src="assets/network_annotated_all_jurkat_essential_genes.pdf"
+style="width:100.0%" /></p>
+<ul>
+<li><strong>Disease Proximal Genes (DPGs)</strong>: IL10RB, DNMT3A,
+ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2, GNAI3, ING1</li>
+<li>ATG4C, and DNMT3A are burdent test significant genes</li>
+<li>LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes,
+regulating by multiple peripheral genes</li>
+</ul>
+</div>
+<div id="cross-mappability-analysis" class="section level3">
+<h3>Cross-mappability analysis</h3>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6305209/">Cross
+Mappability</a> for gene A to gene B (crossmap(A,B), defined as the
+number of gene A’s k-mers (75-mers from exons and 36-mers from UTRs)
+whose alignment start within exonic or untranslated regions of gene B.
+Only genes with mappability &lt; 1 (not NA) appear in cross mapping
+files. In other words, it is the count of how many k-mers from A map to
+B.</p>
+<p>Because crossmap(A, B) <span class="math inline">\(\ne\)</span>
+crossmap(B, A) (A may have longer exons or more repetitive sequence), a
+symmetric version is defined <span
+class="math inline">\(\frac{\text{crossmap(A,B)} +
+\text{crossmap(B,A)}}{2}\)</span>.</p>
+<p>The range for cross mappability is larger than 0. And the summary for
+cross mappability as the following</p>
+<ul>
+<li>Distribution of cross mappability</li>
+</ul>
+<p><img src="assets/hist_cross_mappability.png"
+style="width:100.0%" /></p>
+<p><img src="assets/box_plot_cross_mappability.png"
+style="width:100.0%" /></p>
+<table>
+<thead>
+<tr class="header">
+<th>Percentile</th>
+<th>Cross Mappability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>10%</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>20%</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>30%</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>40%</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>50%</td>
+<td>14</td>
+</tr>
+<tr class="odd">
+<td>60%</td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td>70%</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td>80%</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td>90%</td>
+<td>58</td>
+</tr>
+<tr class="odd">
+<td>100%</td>
+<td>16921</td>
+</tr>
+</tbody>
+</table>
+<p>Most of the cross-mappability is less than 30. It is heavy tail, a
+lot of outliers.</p>
+<ul>
+<li>Distribution of symmetric cross mappability</li>
+</ul>
+<p><img src="assets/hist_symmetric_cross_mappability.png"
+style="width:100.0%" /></p>
+<p><img src="assets/box_plot_symmetric_cross_mappability.png"
+style="width:100.0%" /></p>
+<table>
+<thead>
+<tr class="header">
+<th>Percentile</th>
+<th>Symmetric Cross Mappability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0%</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>10%</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td>20%</td>
+<td>2.5</td>
+</tr>
+<tr class="even">
+<td>30%</td>
+<td>4.0</td>
+</tr>
+<tr class="odd">
+<td>40%</td>
+<td>6.0</td>
+</tr>
+<tr class="even">
+<td>50%</td>
+<td>8.0</td>
+</tr>
+<tr class="odd">
+<td>60%</td>
+<td>11.5</td>
+</tr>
+<tr class="even">
+<td>70%</td>
+<td>16.0</td>
+</tr>
+<tr class="odd">
+<td>80%</td>
+<td>23.0</td>
+</tr>
+<tr class="even">
+<td>90%</td>
+<td>38.5</td>
+</tr>
+<tr class="odd">
+<td>100%</td>
+<td>15660.5</td>
+</tr>
+</tbody>
+</table>
+<p>Similarly, most of the cross-mappability is less than 30. It is heavy
+tail, a lot of outliers.</p>
+<ul>
+<li><p>Dicussion: how to set threshold to define high cross
+mappability</p>
+<ul>
+<li>Normalization: require length of gene A ?</li>
+<li>By distribution ?</li>
+</ul></li>
+</ul>
+</div>
 </div>
 <div id="qa-on-the-project" class="section level2">
 <h2>Q&amp;A on the Project</h2>
@@ -3009,7 +3235,7 @@ Session information
 <div id="workflowr-sessioninfo" class="collapse">
 <pre><code>R version 4.4.3 (2025-02-28)
 Platform: aarch64-apple-darwin20
-Running under: macOS Sequoia 15.6
+Running under: macOS Sequoia 15.5
 
 Matrix products: default
 BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
@@ -3028,7 +3254,7 @@ other attached packages:
 [1] kableExtra_1.4.0 knitr_1.50      
 
 loaded via a namespace (and not attached):
- [1] jsonlite_2.0.0     compiler_4.4.3     promises_1.3.2     Rcpp_1.0.14       
+ [1] jsonlite_2.0.0     compiler_4.4.3     promises_1.3.3     Rcpp_1.0.14       
  [5] xml2_1.3.8         stringr_1.5.1      git2r_0.36.2       later_1.4.2       
  [9] jquerylib_0.1.4    textshaping_1.0.1  systemfonts_1.2.3  scales_1.4.0      
 [13] yaml_2.3.10        fastmap_1.2.0      R6_2.6.1           workflowr_1.7.1   

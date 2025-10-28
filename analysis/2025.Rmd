@@ -778,7 +778,7 @@ Then, performing Dandelion on trans effect between genes by using Sceptre
 
 - Peripheral genes overlapped with GWAS nearest genes as candidate peripheral genes
 
-![](assets/network_annotated_gwas_overlap_jurkat_essential_genes.pdf){width="100%"}
+![](assets/network_annotated_gwas_overlap_jurkat_essential_genes.png){width="100%"}
   - **Disease Proximal Genes (DPGs)**: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2
   - ATG4C, and DNMT3A are burdent test significant genes
   - LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by multiple peripheral genes
@@ -786,7 +786,7 @@ Then, performing Dandelion on trans effect between genes by using Sceptre
 
 - All peripheral genes as candidate peripheral genes
 
-![](assets/network_annotated_all_jurkat_essential_genes.pdf){width="100%"}
+![](assets/network_annotated_all_jurkat_essential_genes.png){width="100%"}
 
 
   - **Disease Proximal Genes (DPGs)**: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2, GNAI3, ING1
