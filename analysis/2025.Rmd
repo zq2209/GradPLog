@@ -794,6 +794,29 @@ Then, performing Dandelion on trans effect between genes by using Sceptre
   - LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by multiple peripheral genes
   
   
+#### Repeat all Dandelion analysis on it with mito percent 
+
+Fisrt, the correlation between 2 result
+
+![](correlation_sceptre_mito_percent.png){width="100%"}
+
+Then, performing Dandelion on trans effect between genes by using Sceptre
+
+- Peripheral genes overlapped with GWAS nearest genes as candidate peripheral genes
+
+![](assets/network_annotated_gwas_overlap_jurkat_essential_genes_mito_percent.pdf){width="100%"}
+  - **Disease Proximal Genes (DPGs)**: IL10RB, DNMT3A, ATG4C, TSPAN17, SF3B1, STRADB, USP36, LCP2
+  - ATG4C, and DNMT3A are burdent test significant genes
+  - LCP2, ATG4C, USP36, IL10RB, TSPAN17, STRADB are hub genes, regulating by multiple peripheral genes
+
+
+- All peripheral genes as candidate peripheral genes
+
+![](assets/network_annotated_all_jurkat_essential_genes_mito_percent.pdf){width="100%"}
+  
+ - GNAI3 is missing from this
+  
+  
 ### Cross-mappability analysis
 
 [Cross Mappability](https://pmc.ncbi.nlm.nih.gov/articles/PMC6305209/) for gene A to gene B (crossmap(A,B), defined as the number of gene A's k-mers (75-mers from exons and 36-mers from UTRs) whose alignment start within exonic or untranslated regions of gene B. Only genes with mappability < 1 (not NA) appear in cross mapping files. In other words, it is the count of how many k-mers from A map to B. 
