@@ -880,6 +880,27 @@ Similarly, most of the cross-mappability is less than 30. It is heavy tail, a lo
   - By distribution ?
 
 
+#### Look into impact of cross-mappability to Dandelion 
+
+First annotate the GWAS overlapped sceptre result with symmetric cross mappability (gene A and B can be reversed) score for each gene pair. 
+
+It turns out that many pairs have cross mappability score of NA. Then, further investigate this situation. 
+
+By looking back to the paper, there are two possible reasons:
+
+1. No cross mappability for these pairs
+2. Gene mappability is 1 or close to 1
+
+2 is more likely to be the case (since almost half of genes have mappability of 1). So, to validate this, I annotate the gene mappability of each gene:
+
+1. at least one of the genes have gene mappability = 1, no shared k-mers
+2. both gene mappability > 0.5, each k-mers only map to 1-2 position
+3. only a few that gene mappability > 0.1
+
+Especially for pairs detected by Dandelion, most of them have at least one gene that mappability is 1. 
+
+What if we remove cross mappable pairs before running Dandelion analysis
+  - The core genes are the same, but the regulators are less. 
 
 ## Q&A on the Project
 
