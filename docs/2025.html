@@ -400,7 +400,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-10-29
+<strong>Last updated:</strong> 2025-11-12
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreee29b857cc34783e45d5fcadc899c28446ad99911targetblanke29b857a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree5a5fbd09472f44e8350308d8028b96a862ee0a05targetblank5a5fbd0a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/e29b857cc34783e45d5fcadc899c28446ad99911" target="_blank">e29b857</a>
+<a href="https://github.com/zq2209/GradPLog/tree/5a5fbd09472f44e8350308d8028b96a862ee0a05" target="_blank">5a5fbd0</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreee29b857cc34783e45d5fcadc899c28446ad99911targetblanke29b857a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree5a5fbd09472f44e8350308d8028b96a862ee0a05targetblank5a5fbd0a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/e29b857cc34783e45d5fcadc899c28446ad99911" target="_blank">e29b857</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/5a5fbd09472f44e8350308d8028b96a862ee0a05" target="_blank">5a5fbd0</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -609,6 +609,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/5a5fbd09472f44e8350308d8028b96a862ee0a05/analysis/2025.Rmd" target="_blank">5a5fbd0</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-11-12
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/bb3a9f968030f6ecfb2c1f96f8f21106fa562a95/docs/2025.html" target="_blank">bb3a9f9</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-10-29
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -3343,6 +3377,34 @@ mappability</p>
 <li>By distribution ?</li>
 </ul></li>
 </ul>
+<div id="look-into-impact-of-cross-mappability-to-dandelion"
+class="section level4">
+<h4>Look into impact of cross-mappability to Dandelion</h4>
+<p>First annotate the GWAS overlapped sceptre result with symmetric
+cross mappability (gene A and B can be reversed) score for each gene
+pair.</p>
+<p>It turns out that many pairs have cross mappability score of NA.
+Then, further investigate this situation.</p>
+<p>By looking back to the paper, there are two possible reasons:</p>
+<ol style="list-style-type: decimal">
+<li>No cross mappability for these pairs</li>
+<li>Gene mappability is 1 or close to 1</li>
+</ol>
+<p>2 is more likely to be the case (since almost half of genes have
+mappability of 1). So, to validate this, I annotate the gene mappability
+of each gene:</p>
+<ol style="list-style-type: decimal">
+<li>at least one of the genes have gene mappability = 1, no shared
+k-mers</li>
+<li>both gene mappability &gt; 0.5, each k-mers only map to 1-2
+position</li>
+<li>only a few that gene mappability &gt; 0.1</li>
+</ol>
+<p>Especially for pairs detected by Dandelion, most of them have at
+least one gene that mappability is 1.</p>
+<p>What if we remove cross mappable pairs before running Dandelion
+analysis - The core genes are the same, but the regulators are less.</p>
+</div>
 </div>
 </div>
 <div id="qa-on-the-project" class="section level2">
