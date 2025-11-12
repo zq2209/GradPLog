@@ -884,7 +884,7 @@ Similarly, most of the cross-mappability is less than 30. It is heavy tail, a lo
 
 First annotate the GWAS overlapped sceptre result with symmetric cross mappability (gene A and B can be reversed) score for each gene pair. 
 
-It turns out that many pairs have cross mappability score of NA. Then, further investigate this situation. 
+It turns out that many pairs have cross mappability score of NA (Only 10-15% have the score). Then, further investigate this situation. 
 
 By looking back to the paper, there are two possible reasons:
 
