@@ -901,6 +901,116 @@ Especially for pairs detected by Dandelion, most of them have at least one gene 
 
 What if we remove cross mappable pairs before running Dandelion analysis
   - The core genes are the same, but the regulators are less. 
+  
+  
+## scATAC and scRNA
+
+
+#### Data Overview
+
+Meeting Agenda
+
+1. scRNA - Basu
+    1. scRNA: 36601 genes x 379736 cells
+    2. 85 unique samples (46 patients): 
+        1. 33 controls, 16 nons, 19 adjacent, 17 inf
+        2. 51 females
+        3. 37 ascending colon
+        4. min age 19, max age 75, mean/median 45/48
+    3. 3 unique major cell types: Epithelial, Immune, Mesenchymal
+2. scATAC - Pott
+    1. scATAC: 557310 peak x 178030 cells 
+    2. 71 unique samples (31 patients):
+        1. 29 controls, 42 CD
+        2. 31 AC, 40 TI
+    3. 3 unique cell types: epithelial, immune, stromal
+3. scRNA - Pott
+    1. scRNA: 23849 genes x 213275 cells
+    2. 46 patients
+
+
+#### Potential analysis 
+
+1. Map Genes to Regulatory Regions
+  1. Promoter Mapping
+    - What it is: Looking for peaks that fall within the promoter region of a gene.
+    
+    - Biological rationale: Promoters are DNA sequences immediately upstream of transcription start sites (TSS) where RNA polymerase and transcription factors bind to initiate transcription. Peaks in promoter regions are direct regulators of gene expression.
+    
+    - Technical implementation:
+    
+      - TSS identification: For each gene, we identify the Transcription Start Site:
+      
+          - For + strand genes: TSS = gene start (left in your annotation)
+      
+          - For - strand genes: TSS = gene end (right in your annotation)
+      
+      - Promoter definition: We define promoter as TSS ± 2kb (default)
+      
+          - Upstream 2kb + Downstream 2kb = 4kb total region
+  
+      - Mapping: Any ATAC-seq peak that overlaps this promoter region is mapped to that gene
+    
+  2. Gene Body Mapping
+  
+    - What it is: Looking for peaks that fall within the transcribed region of a gene (exons + introns).
+    
+    - Biological rationale: Chromatin accessibility within gene bodies can influence:
+    
+      - Transcription elongation (RNA polymerase pausing/release)
+    
+      - Alternative splicing (by regulating spliceosome access)
+    
+      - Transcription termination
+    
+      - Epigenetic memory of recently transcribed genes
+    
+    - Technical implementation:
+    
+      - Gene body definition: The entire region from gene start to end (left to right in your annotation)
+    
+      - Mapping: Any ATAC-seq peak that overlaps this gene body region is mapped to that gene
+      
+      
+  3. Proximity Mapping
+    - What it is: Looking for peaks that are near but not overlapping a gene, up to a certain distance.
+    
+    - Biological rationale: Enhancers and other distal regulatory elements can be located far from genes (even megabases away) but regulate them through 3D chromatin looping. This method captures:
+
+      - Distal enhancers that loop to contact promoters
+      
+      - Silencer elements that repress gene expression
+      
+      - Boundary elements that insulate genes
+
+    - Technical implementation:
+
+      - ind nearest gene: For each peak, find the closest gene's TSS
+      
+      - Distance calculation: Calculate genomic distance from peak to TSS
+      
+      - Distance cutoff: Keep only peaks within a threshold (default: 500kb)
+      
+      - No overlap requirement: Peaks don't need to overlap gene regions
+      
+2. Analyze Cell-Type Specific Accessibility
+    1. Heritability enrichment analysis
+    2. Identify Which Cell Types Show Accessibility at Gene Regions
+3. Differential Accessibility Analysis
+    1. Find Peaks that are Differentially Accessible Between Conditions
+
+DE analysis
+
+1. DE for different cell types
+2. pvlaue limit 
+3. extreme genes concerns
+4. 1 overlapping of DPGs with DE: LCP2 in Macrophage M1 significant, other cell types not
+
+Heritability enrichment analysis 
+
+1. by using the ATAC seq data, by cell type
+
+
 
 ## Q&A on the Project
 
