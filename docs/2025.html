@@ -531,15 +531,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreef3c45d88754da771756499309586ee5c456bfff7targetblankf3c45d8a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree147edc95bf0e7373e27bbe50884315be7afac370targetblank147edc9a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/zq2209/GradPLog/tree/f3c45d88754da771756499309586ee5c456bfff7" target="_blank">f3c45d8</a>
+<a href="https://github.com/zq2209/GradPLog/tree/147edc95bf0e7373e27bbe50884315be7afac370" target="_blank">147edc9</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtreef3c45d88754da771756499309586ee5c456bfff7targetblankf3c45d8a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomzq2209GradPLogtree147edc95bf0e7373e27bbe50884315be7afac370targetblank147edc9a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -549,7 +549,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/zq2209/GradPLog/tree/f3c45d88754da771756499309586ee5c456bfff7" target="_blank">f3c45d8</a>.
+<a href="https://github.com/zq2209/GradPLog/tree/147edc95bf0e7373e27bbe50884315be7afac370" target="_blank">147edc9</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -609,6 +609,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/zq2209/GradPLog/blob/147edc95bf0e7373e27bbe50884315be7afac370/analysis/2025.Rmd" target="_blank">147edc9</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-12-10
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/zq2209/GradPLog/d533997944ef3bbbf043b4ad8dab34937f89c94e/docs/2025.html" target="_blank">d533997</a>
+</td>
+<td>
+zq2209
+</td>
+<td>
+2025-12-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -3513,11 +3547,12 @@ analysis - The core genes are the same, but the regulators are less.</p>
 <div id="potential-analysis" class="section level4">
 <h4>Potential analysis</h4>
 <ol style="list-style-type: decimal">
-<li>Map Genes to Regulatory Regions</li>
-<li>Promoter Mapping - What it is: Looking for peaks that fall within
-the promoter region of a gene.</li>
+<li><p>Map Genes to Regulatory Regions</p></li>
+<li><p>Promoter Mapping</p></li>
 </ol>
-<pre><code>- Biological rationale: Promoters are DNA sequences immediately upstream of transcription start sites (TSS) where RNA polymerase and transcription factors bind to initiate transcription. Peaks in promoter regions are direct regulators of gene expression.
+<pre><code>- What it is: Looking for peaks that fall within the promoter region of a gene.
+
+- Biological rationale: Promoters are DNA sequences immediately upstream of transcription start sites (TSS) where RNA polymerase and transcription factors bind to initiate transcription. Peaks in promoter regions are direct regulators of gene expression.
 
 - Technical implementation:
 
@@ -3555,10 +3590,11 @@ the promoter region of a gene.</li>
   
   </code></pre>
 <ol start="3" style="list-style-type: decimal">
-<li>Proximity Mapping - What it is: Looking for peaks that are near but
-not overlapping a gene, up to a certain distance.</li>
+<li>Proximity Mapping</li>
 </ol>
-<pre><code>- Biological rationale: Enhancers and other distal regulatory elements can be located far from genes (even megabases away) but regulate them through 3D chromatin looping. This method captures:
+<pre><code>- What it is: Looking for peaks that are near but not overlapping a gene, up to a certain distance.
+
+- Biological rationale: Enhancers and other distal regulatory elements can be located far from genes (even megabases away) but regulate them through 3D chromatin looping. This method captures:
 
   - Distal enhancers that loop to contact promoters
   
