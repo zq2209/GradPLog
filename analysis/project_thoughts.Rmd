@@ -43,10 +43,12 @@ Reveals the functional consequences - which genes are expressed, in which cell t
 
   - Dot plot - case vs control
   - UMAP and gene expression plot
+  - Which genes drive the high expression in which cell
 
 2. Perform statistical tests to identify DPGs that are significantly enriched or highly expressed in specific cell types.
 
   - AUCell analysis
+  - enrichment analysis of core genes vs common variants (GWAS)
 
 
 
