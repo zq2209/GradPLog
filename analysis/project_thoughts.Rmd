@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Research Progress & Planning'
 output:
   workflowr::wflow_html:
               toc: true
@@ -20,4 +20,40 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+
+## Goal
+
+**This document captures the core logic, insights, and evolving ideas behind the project. It serves as a space to refine my thinking and outline the conceptual steps that will guide the analysis.**
+
+
+## Background
+
+The detailed progress refer to the [2025 progress](https://zq2209.github.io/GradPLog/2025.html). 
+
+The overall is we have identified DPGs and distal genes for IBD, and what's next steps to better understand the disease with what we have.  
+
+
+## Integrate scRNA and scATAC 
+
+### scRNA
+
+Reveals the functional consequences - which genes are expressed, in which cell types, and how their expression patterns change in disease
+
+1. Determine in which cell types Disease Proximal Genes (DPGs) are expressed and assess whether their expression differs between IBD cases and controls.
+
+  - Dot plot - case vs control
+  - UMAP and gene expression plot
+
+2. Perform statistical tests to identify DPGs that are significantly enriched or highly expressed in specific cell types.
+
+  - AUCell analysis
+
+
+
+
+
+
+
+
+
 
